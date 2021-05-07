@@ -1,0 +1,5 @@
+# ls
+alias ls='exa'
+alias ll='exa -ahl --git'
+
+alias tree='ll -T'
