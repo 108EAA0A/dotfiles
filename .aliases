@@ -3,3 +3,5 @@ alias ls='exa'
 alias ll='exa -ahl --git'
 
 alias tree='ll -T'
+
+alias dc='docker-compose'
