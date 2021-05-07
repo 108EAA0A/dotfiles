@@ -37,7 +37,7 @@ zplug "junegunn/fzf", use:"shell/*.zsh", as:plugin
 zplug "b4b4r07/enhancd", use:init.sh
 
 # git のローカルリポジトリを一括管理（fzf でリポジトリへジャンプ）
-zplug "motemen/ghq", as:command, from:gh-r
+#zplug "motemen/ghq", as:command, from:gh-r
 
 #zplug "b4b4r07/zsh-gomi", as:command, use:bin
 #zplug "seebi/dircolors-solarized", ignore:"*", as:plugin
