@@ -6,6 +6,9 @@ ln -snfv "$(pwd)/.zshenv" "${HOME}/.zshenv"
 ln -snfv "$(pwd)/.zshrc" "${HOME}/.zshrc"  
 
 echo "Install modules..."
+
+sh -c "$(curl -fsSL https://starship.rs/install.sh)" -- -y
+
 case "${OSTYPE}" in
 darwin*)
   source "$(pwd)/brew_install.sh"

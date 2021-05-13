@@ -23,6 +23,10 @@ source ${HOME}/.zplug
 # ------------------------------
 source ${HOME}/.aliases
 
+# ------------------------------
+# Init Starship
+# ------------------------------
+eval "$(starship init zsh)"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '${HOME}/google-cloud-sdk/path.zsh.inc' ]; then . '${HOME}/google-cloud-sdk/path.zsh.inc'; fi
