@@ -18,7 +18,11 @@ formulas=(
 
 
 cask_formulas=(
+  google-chrome
+  graphiql
   font-ricty-diminished
+  slack
+  visual-studio-code
 )
 
 brew upgrade
