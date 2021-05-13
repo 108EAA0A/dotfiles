@@ -1,6 +1,6 @@
 # ls
 alias ls='exa'
-alias ll='exa -ahl --git'
+alias ll='exa -ahl --git -I "node_modules|.git|.cache" --color=always --icons'
 
 alias tree='ll -T'
 
