@@ -11,6 +11,7 @@ formulas=(
   gh
   imagemagick
   jq
+  lazydocker
   nmap
   nkf
   tldr
@@ -28,6 +29,7 @@ cask_formulas=(
 brew upgrade
 
 brew tap homebrew/cask-fonts
+brew tap jesseduffield/lazydocker
 
 for formula in ${formulas[@]}; do
   brew install ${formula}
