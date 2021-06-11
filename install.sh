@@ -9,9 +9,9 @@ ln -snfv "$(pwd)/.config/starship.toml" "${HOME}/.config/starship.toml"
 echo "Install modules..."
 
 if ! type zsh; then
-  apt-get update
-  apt-get -y install zsh
-  chsh -s $(which zsh)
+  sudo apt-get update
+  sudo apt-get -y install zsh
+  sudo chsh -s $(which zsh)
 fi
 
 sh -c "$(curl -fsSL https://starship.rs/install.sh)" -- -y
