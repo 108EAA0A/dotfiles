@@ -1,0 +1,20 @@
+name: install
+
+on:
+  push:
+  schedule:
+    - cron: '0 0 1 * *'
+
+jobs:
+  install:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macOS-latest]
+      fail-fast: false
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: check zsh
+        run: type zsh
+      - uses: actions/checkout@v1
+      - name: install dotfiles
+        run: ./install.sh
