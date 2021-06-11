@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/sh
 
 echo "Create dotfile links..."
 ln -snfv "$(pwd)/.aliases" "${HOME}/.aliases"
@@ -8,6 +8,12 @@ ln -snfv "$(pwd)/.config/starship.toml" "${HOME}/.config/starship.toml"
 
 echo "Install modules..."
 
+if ! type zsh; then
+  apt-get update
+  apt-get -y install zsh
+  chsh -s $(which zsh)
+fi
+
 sh -c "$(curl -fsSL https://starship.rs/install.sh)" -- -y
 
 case "${OSTYPE}" in
@@ -15,7 +21,7 @@ darwin*)
   # dummy
   ;;
 linux*)
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  zsh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   ;;
 esac
 
