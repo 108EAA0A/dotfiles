@@ -1,12 +1,6 @@
 #!/bin/sh
 
-echo "Create dotfile links..."
-ln -snfv "$(pwd)/.aliases" "${HOME}/.aliases"
-ln -snfv "$(pwd)/.zshenv" "${HOME}/.zshenv"
-ln -snfv "$(pwd)/.zshrc" "${HOME}/.zshrc"
-ln -snfv "$(pwd)/.config/starship.toml" "${HOME}/.config/starship.toml"
-
-echo "Install modules..."
+echo "Check and Install zsh..."
 
 # install zsh and chsh
 if ! type zsh; then
@@ -16,11 +10,19 @@ if ! type zsh; then
   sudo chsh -s $(which zsh)
 fi
 
-# if fail source to rerun this file in zsh
-if ! type source; then
+# if not zsh to rerun this file in zsh
+if ! type source || ! type autoload; then
   zsh $(cd $(dirname $0); pwd)/install.sh
   exit
 fi
+
+echo "Create dotfile links..."
+ln -snfv "$(pwd)/.aliases" "${HOME}/.aliases"
+ln -snfv "$(pwd)/.zshenv" "${HOME}/.zshenv"
+ln -snfv "$(pwd)/.zshrc" "${HOME}/.zshrc"
+ln -snfv "$(pwd)/.config/starship.toml" "${HOME}/.config/starship.toml"
+
+echo "Install modules..."
 
 sh -c "$(curl -fsSL https://starship.rs/install.sh)" -- -y
 
