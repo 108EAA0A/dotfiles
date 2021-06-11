@@ -1,4 +1,4 @@
-name: install
+name: install test
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
     - cron: '0 0 1 * *'
 
 jobs:
-  install:
+  install-test:
     strategy:
       matrix:
         os: [ubuntu-latest, macOS-latest]
