@@ -8,6 +8,9 @@ source ~/.zplug/init.zsh
 
 # ---ここからプラグイン---
 
+# 時間がかかるコマンドを実行すると完了時に通知
+zplug 't413/zsh-background-notify'
+
 # 補完を更に強化する
 # pacman や yaourt のパッケージリストも補完するようになる
 zplug "zsh-users/zsh-completions"
