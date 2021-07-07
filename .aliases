@@ -5,3 +5,5 @@ alias ll='exa -ahl --git -I "node_modules|.git|.cache" --color=always --icons'
 alias tree='ll -T'
 
 alias dc='docker compose'
+
+alias kusa='curl https://github-contributions-api.deno.dev/108eaa0a.term'
