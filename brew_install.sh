@@ -38,3 +38,7 @@ done
 for formula in ${cask_formulas[@]}; do
   brew install --cask ${formula}
 done
+
+GCC_VER=$(ls /usr/local/bin | grep -E "^g\+\+\-(\d+) \->" | awk '{print $1}' | sed -e "s/g++-//g")
+ln -snfv /usr/local/bin/gcc-${GCC_VER} /usr/local/bin/gcc
+ln -snfv /usr/local/bin/g++-${GCC_VER} /usr/local/bin/g++
