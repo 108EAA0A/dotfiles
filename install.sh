@@ -28,7 +28,10 @@ sh -c "$(curl -fsSL https://starship.rs/install.sh)" -- -y
 
 case "${OSTYPE}" in
 darwin*)
-  # dummy
+  echo "install CommandLineTools..."
+  sudo xcode-select --switch /Library/Developer/CommandLineTools
+  xcode-select --install
+  echo "CommandLineTools" `pkgutil --pkg-info=com.apple.pkg.CLTools_Executables | grep version`
   ;;
 linux*)
   zsh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
