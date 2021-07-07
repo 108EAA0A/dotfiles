@@ -2,7 +2,7 @@
 
 install test status
 
-[![matrix](https://github-actions.40ants.com/108EAA0A/dotfiles/matrix.svg)](https://github.com/108EAA0A/dotfiles)
+[![install_test matrix](https://github-actions.40ants.com/108EAA0A/dotfiles/matrix.svg)](https://github.com/108EAA0A/dotfiles/actions/workflows/install_test.yml)
 
 ## Install
 
