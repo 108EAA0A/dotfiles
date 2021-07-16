@@ -14,6 +14,7 @@ formulas=(
   lazydocker
   nmap
   nkf
+  sl
   tldr
 )
 
