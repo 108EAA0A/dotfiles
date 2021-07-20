@@ -8,6 +8,7 @@ formulas=(
   fzf
   gcc
   gibo
+  git-flow
   gh
   imagemagick
   jq
