@@ -24,8 +24,8 @@ if ! type source || ! type autoload; then
 fi
 
 echo "Create dotfile links..."
-ln -snfv "${DOT_DIR}/.aliases" "${HOME}/.aliases"
-ln -snfv "${DOT_DIR}/.zplug" "${HOME}/.zplug.zsh"
+ln -snfv "${DOT_DIR}/.aliases.sh" "${HOME}/.aliases"
+ln -snfv "${DOT_DIR}/.zplug.zsh" "${HOME}/.zplug.zsh"
 ln -snfv "${DOT_DIR}/.zshenv" "${HOME}/.zshenv"
 ln -snfv "${DOT_DIR}/.zshrc" "${HOME}/.zshrc"
 ln -snfv "${DOT_DIR}/.config/starship.toml" "${HOME}/.config/starship.toml"
