@@ -1,6 +1,6 @@
 #!/bin/sh
 
-DOT_DIR="${HOME}/dotfiles"
+DOT_DIR="$(pwd)/dotfiles"
 
 if [ ! -d $DOT_DIR ]; then
   echo "clone dotfiles repo..."
@@ -42,6 +42,7 @@ darwin*)
   echo "CommandLineTools" `pkgutil --pkg-info=com.apple.pkg.CLTools_Executables | grep version`
   ;;
 linux*)
+  # install Homebrew
   zsh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   ;;
 esac
