@@ -1,5 +1,12 @@
 #!/bin/sh
 
+DOT_DIR="${HOME}/dotfiles"
+
+if [ ! -d $DOT_DIR ]; then
+  echo "clone dotfiles repo..."
+  git clone https://github.com/108EAA0A/dotfiles.git $DOT_DIR
+fi
+
 echo "Check and Install zsh..."
 
 # install zsh and chsh
@@ -12,15 +19,8 @@ fi
 
 # if not zsh to rerun this file in zsh
 if ! type source || ! type autoload; then
-  zsh $(cd $(dirname $0); pwd)/install.sh
+  zsh "${DOT_DIR}/install.sh"
   exit
-fi
-
-DOT_DIR="${HOME}/dotfiles"
-
-if [ ! -d $DOT_DIR ]; then
-  echo "clone dotfiles repo..."
-  git clone https://github.com/108EAA0A/dotfiles.git $DOT_DIR
 fi
 
 echo "Create dotfile links..."
