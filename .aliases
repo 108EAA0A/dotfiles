@@ -7,3 +7,7 @@ alias tree='ll -T'
 alias dc='docker compose'
 
 alias kusa='curl https://github-contributions-api.deno.dev/108eaa0a.term'
+
+alias gca='git commit --amend'
+alias gcann='git commit --amend --no-edit -n'
+alias gfpo='git push --force-with-lease origin'
