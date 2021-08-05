@@ -6,6 +6,7 @@ export LC_ALL=ja_JP.UTF-8
 export TZ=Asia/Tokyo
 
 export PATH=/usr/local/bin:${PATH}
+export PATH=/usr/local/opt/binutils/bin:${PATH}
 
 export XDG_CONFIG_HOME=${HOME}/.config
 export XDG_CACHE_HOME=${HOME}/.cache

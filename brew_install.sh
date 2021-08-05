@@ -1,6 +1,7 @@
 #!/bin/zsh
 
 formulas=(
+  binutils
   cmake
   curl
   exa
