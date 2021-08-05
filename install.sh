@@ -16,12 +16,19 @@ if ! type source || ! type autoload; then
   exit
 fi
 
+DOT_DIR="${HOME}/dotfiles"
+
+if [ ! -d $DOT_DIR ]; then
+  echo "clone dotfiles repo..."
+  git clone https://github.com/108EAA0A/dotfiles.git $DOT_DIR
+fi
+
 echo "Create dotfile links..."
-ln -snfv "$(pwd)/.aliases" "${HOME}/.aliases"
-ln -snfv "$(pwd)/.zplug" "${HOME}/.zplug.zsh"
-ln -snfv "$(pwd)/.zshenv" "${HOME}/.zshenv"
-ln -snfv "$(pwd)/.zshrc" "${HOME}/.zshrc"
-ln -snfv "$(pwd)/.config/starship.toml" "${HOME}/.config/starship.toml"
+ln -snfv "${DOT_DIR}/.aliases" "${HOME}/.aliases"
+ln -snfv "${DOT_DIR}/.zplug" "${HOME}/.zplug.zsh"
+ln -snfv "${DOT_DIR}/.zshenv" "${HOME}/.zshenv"
+ln -snfv "${DOT_DIR}/.zshrc" "${HOME}/.zshrc"
+ln -snfv "${DOT_DIR}/.config/starship.toml" "${HOME}/.config/starship.toml"
 
 echo "Install modules..."
 
@@ -40,9 +47,9 @@ linux*)
 esac
 brew doctor
 
-source "$(pwd)/brew_install.sh"
+source "${DOT_DIR}/brew_install.sh"
 
 echo "Loading dotfiles..."
-source "$(pwd)/.zshrc"
+source "${DOT_DIR}/.zshrc"
 
 echo "Install all done!"
