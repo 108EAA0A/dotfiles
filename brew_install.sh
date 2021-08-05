@@ -20,8 +20,8 @@ formulas=(
   tldr
 )
 
-
 cask_formulas=(
+  docker
   google-chrome
   graphiql
   font-ricty-diminished
@@ -38,9 +38,16 @@ for formula in ${formulas[@]}; do
   brew install ${formula}
 done
 
-for formula in ${cask_formulas[@]}; do
-  brew install --cask ${formula}
-done
+case "${OSTYPE}" in
+darwin*)
+  for formula in ${cask_formulas[@]}; do
+    brew install --cask ${formula}
+  done
+  ;;
+linux*)
+  brew install docker
+  ;;
+esac
 
 GCC_VER=$(ls /usr/local/bin | grep -E "^g\+\+\-(\d+) \->" | awk '{print $1}' | sed -e "s/g++-//g")
 sudo ln -snfv /usr/local/bin/gcc-${GCC_VER} /usr/local/bin/gcc
