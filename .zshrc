@@ -16,7 +16,7 @@ esac
 # ------------------------------
 # Load zplug
 # ------------------------------
-source ${HOME}/.zplug
+source ${HOME}/.zplug.zsh
 
 # ------------------------------
 # Load aliases

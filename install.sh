@@ -18,6 +18,7 @@ fi
 
 echo "Create dotfile links..."
 ln -snfv "$(pwd)/.aliases" "${HOME}/.aliases"
+ln -snfv "$(pwd)/.zplug" "${HOME}/.zplug.zsh"
 ln -snfv "$(pwd)/.zshenv" "${HOME}/.zshenv"
 ln -snfv "$(pwd)/.zshrc" "${HOME}/.zshrc"
 ln -snfv "$(pwd)/.config/starship.toml" "${HOME}/.config/starship.toml"
