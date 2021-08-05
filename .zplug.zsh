@@ -6,29 +6,18 @@ fi
 
 source ~/.zplug/init.zsh
 
-# ---ここからプラグイン---
-
 # 時間がかかるコマンドを実行すると完了時に通知
 zplug 't413/zsh-background-notify'
-
-# 補完を更に強化する
-# pacman や yaourt のパッケージリストも補完するようになる
-zplug "zsh-users/zsh-completions"
 
 # git の補完を効かせる
 # 補完＆エイリアスが追加される
 zplug "plugins/git", from:oh-my-zsh
 zplug "peterhurford/git-aliases.zsh"
 
-# python使う時にいるかも
-#zplug "plugins/pip", from:oh-my-zsh
-#zplug "mattberther/zsh-pyenv"
-
 #zplug "docker/cli", use:"contrib/completion/zsh/_docker"
 
 # fzf でよく使う関数の詰め合わせ
 zplug "mollifier/anyframe"
-
 #zplug "mollifier/cd-gitroot"
 
 # fzf本体（連携前提のパーツ）
@@ -39,12 +28,9 @@ zplug "junegunn/fzf", use:"shell/*.zsh", as:plugin
 # ディレクトリ移動を高速化（fzf であいまい検索）
 zplug "b4b4r07/enhancd", use:init.sh
 
-# git のローカルリポジトリを一括管理（fzf でリポジトリへジャンプ）
-#zplug "motemen/ghq", as:command, from:gh-r
-
-#zplug "b4b4r07/zsh-gomi", as:command, use:bin
-#zplug "seebi/dircolors-solarized", ignore:"*", as:plugin
-
+# 補完を更に強化する
+# pacman や yaourt のパッケージリストも補完するようになる
+zplug "zsh-users/zsh-completions"
 # 入力途中に候補をうっすら表示
 zplug "zsh-users/zsh-autosuggestions"
 # コマンドを種類ごとに色付け
@@ -54,8 +40,6 @@ zplug "zsh-users/zsh-history-substring-search", defer:3
 
 # 自分自身をプラグインとして管理
 zplug "zplug/zplug", hook-build:'zplug --self-manage'
-
-# ---ここまでプラグイン---
 
 # 未インストール項目をインストールする
 if ! zplug check --verbose; then
