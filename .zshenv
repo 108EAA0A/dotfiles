@@ -7,6 +7,7 @@ export TZ=Asia/Tokyo
 
 export PATH=/usr/local/bin:${PATH}
 export PATH=/usr/local/opt/binutils/bin:${PATH}
+export PATH=${HOME}/.nodebrew/current/bin:${PATH}
 
 export XDG_CONFIG_HOME=${HOME}/.config
 export XDG_CACHE_HOME=${HOME}/.cache

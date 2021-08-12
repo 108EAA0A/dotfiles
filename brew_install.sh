@@ -15,6 +15,7 @@ formulas=(
   jq
   lazydocker
   nmap
+  nodebrew
   nkf
   sl
   tldr
@@ -48,6 +49,9 @@ linux*)
   brew install docker
   ;;
 esac
+
+nodebrew setup
+nodebrew install-binary latest
 
 GCC_VER=$(ls /usr/local/bin | grep -E "^g\+\+\-(\d+) \->" | awk '{print $1}' | sed -e "s/g++-//g")
 sudo ln -snfv /usr/local/bin/gcc-${GCC_VER} /usr/local/bin/gcc
