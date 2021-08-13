@@ -26,6 +26,7 @@ cask_formulas=(
   google-chrome
   graphiql
   font-ricty-diminished
+  keycastr
   slack
   visual-studio-code
 )
