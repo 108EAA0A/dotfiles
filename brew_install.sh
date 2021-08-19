@@ -2,6 +2,7 @@
 
 formulas=(
   binutils
+  bpytop
   cmake
   curl
   exa
@@ -11,6 +12,7 @@ formulas=(
   gibo
   git-flow
   gh
+  hacker1024/hacker1024/coretemp
   imagemagick
   jq
   lazydocker
