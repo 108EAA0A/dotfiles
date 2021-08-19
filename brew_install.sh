@@ -16,6 +16,7 @@ formulas=(
   imagemagick
   jq
   lazydocker
+  lazygit
   nmap
   nodebrew
   nkf
