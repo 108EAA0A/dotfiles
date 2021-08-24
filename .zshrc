@@ -28,6 +28,15 @@ source ${HOME}/.aliases
 # ------------------------------
 eval "$(starship init zsh)"
 
+# ------------------------------
+# Init linuxbrew
+# ------------------------------
+case "${OSTYPE}" in
+linux*)
+  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+  ;;
+esac
+
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '${HOME}/google-cloud-sdk/path.zsh.inc' ]; then . '${HOME}/google-cloud-sdk/path.zsh.inc'; fi
 

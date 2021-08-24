@@ -34,8 +34,6 @@ cask_formulas=(
   visual-studio-code
 )
 
-brew upgrade
-
 brew tap homebrew/cask-fonts
 brew tap jesseduffield/lazydocker
 

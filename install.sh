@@ -42,8 +42,10 @@ darwin*)
   echo "CommandLineTools" `pkgutil --pkg-info=com.apple.pkg.CLTools_Executables | grep version`
   ;;
 linux*)
-  # install Homebrew
-  zsh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  echo "install linuxbrew..."
+  NONINTERACTIVE=1 bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> "${HOME}/.profile"
+  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
   ;;
 esac
 brew doctor
