@@ -2,6 +2,13 @@
 
 DOT_DIR="$(pwd)/dotfiles"
 
+case "${OSTYPE}" in
+linux*)
+  # for ubuntu
+  sudo apt-get update
+  ;;
+esac
+
 if [ ! -d $DOT_DIR ]; then
   echo "clone dotfiles repo..."
   git clone https://github.com/108EAA0A/dotfiles.git $DOT_DIR
@@ -12,7 +19,6 @@ echo "Check and Install zsh..."
 # install zsh and chsh
 if ! type zsh; then
   # for ubuntu
-  sudo apt-get update
   sudo apt-get -y install zsh
   sudo chsh -s $(which zsh)
 fi
