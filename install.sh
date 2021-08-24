@@ -25,6 +25,22 @@ if [ ! -d $DOT_DIR ]; then
   git clone https://github.com/108EAA0A/dotfiles.git $DOT_DIR
 fi
 
+echo "Locale settings..."
+
+case "${OSTYPE}" in
+darwin*)
+  # dummy
+  ;;
+linux*)
+  # for ubuntu
+  sudo apt install -y language-pack-ja
+  sudo update-locale LANG=ja_JP.UTF-8
+  sudo apt install -y manpages-ja manpages-ja-dev
+  # for centos
+  # sudo yum install -y glibc-langpack-ja
+  ;;
+esac
+
 echo "Check and Install zsh..."
 
 # install zsh and chsh
