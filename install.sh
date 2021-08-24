@@ -9,6 +9,17 @@ linux*)
   ;;
 esac
 
+if ! type git; then
+  echo "install git"
+
+  case "${OSTYPE}" in
+  linux*)
+    # for ubuntu
+    sudo apt-get -y install git
+    ;;
+  esac
+fi
+
 if [ ! -d $DOT_DIR ]; then
   echo "clone dotfiles repo..."
   git clone https://github.com/108EAA0A/dotfiles.git $DOT_DIR
