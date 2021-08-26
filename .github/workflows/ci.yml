@@ -1,0 +1,25 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run actionlint
+        shell: bash
+        run: |
+          bash <(curl https://raw.githubusercontent.com/rhysd/actionlint/main/scripts/download-actionlint.bash)
+          ./actionlint -color
+      - name: Run shellcheck
+        run: |
+          shellcheck ./.aliases.sh
+          shellcheck ./.zplug.zsh
+          shellcheck ./.zshenv
+          shellcheck ./.zshrc
+          shellcheck ./brew_install.sh
+          shellcheck ./install.sh
