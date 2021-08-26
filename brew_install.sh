@@ -30,6 +30,7 @@ cask_formulas=(
   graphiql
   font-ricty-diminished
   keycastr
+  monitorcontrol
   slack
   visual-studio-code
 )
