@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # ls
 alias ls='exa'
 alias ll='exa -ahl --git -I "node_modules|.git|.cache" --color=always --icons'

@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 # zplugの設定
 
 if [[ ! -d ~/.zplug ]];then
