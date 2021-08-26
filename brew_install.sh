@@ -6,6 +6,7 @@ formulas=(
   cmake
   curl
   exa
+  ffmpeg
   font-hackgen-nerd
   fzf
   gcc

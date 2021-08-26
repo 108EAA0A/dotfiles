@@ -11,3 +11,5 @@ alias kusa='curl https://github-contributions-api.deno.dev/$(git config user.nam
 alias gca='git commit --amend'
 alias gcann='git commit --amend --no-edit -n'
 alias gfpo='git push --force-with-lease origin'
+
+alias fixmp4='ffmpeg -c copy -bsf:a aac_adtstoasc'
