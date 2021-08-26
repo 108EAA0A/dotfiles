@@ -47,7 +47,7 @@ echo "Check and Install zsh..."
 if ! type zsh; then
   # for ubuntu
   sudo apt-get -y install zsh
-  sudo chsh -s "$(which zsh)"
+  sudo chsh -s "$(command -v zsh)"
 fi
 
 # if not zsh to rerun this file in zsh
