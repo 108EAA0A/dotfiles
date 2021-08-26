@@ -21,6 +21,7 @@ formulas=(
   nmap
   nodebrew
   nkf
+  shellcheck
   sl
   tldr
 )
