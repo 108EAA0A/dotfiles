@@ -20,9 +20,9 @@ if ! type git; then
   esac
 fi
 
-if [ ! -d $DOT_DIR ]; then
+if [ ! -d "${DOT_DIR}" ]; then
   echo "clone dotfiles repo..."
-  git clone https://github.com/108EAA0A/dotfiles.git $DOT_DIR
+  git clone https://github.com/108EAA0A/dotfiles.git "${DOT_DIR}"
 fi
 
 echo "Locale settings..."
@@ -47,7 +47,7 @@ echo "Check and Install zsh..."
 if ! type zsh; then
   # for ubuntu
   sudo apt-get -y install zsh
-  sudo chsh -s $(which zsh)
+  sudo chsh -s "$(which zsh)"
 fi
 
 # if not zsh to rerun this file in zsh
@@ -72,11 +72,12 @@ darwin*)
   echo "install CommandLineTools..."
   sudo xcode-select --switch /Library/Developer/CommandLineTools
   xcode-select --install
-  echo "CommandLineTools" `pkgutil --pkg-info=com.apple.pkg.CLTools_Executables | grep version`
+  echo "CommandLineTools" "$(pkgutil --pkg-info=com.apple.pkg.CLTools_Executables | grep version)"
   ;;
 linux*)
   echo "install linuxbrew..."
   NONINTERACTIVE=1 bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  # shellcheck disable=SC2016
   echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> "${HOME}/.profile"
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
   ;;
