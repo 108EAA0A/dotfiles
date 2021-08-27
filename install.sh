@@ -62,6 +62,12 @@ ln -snfv "${DOT_DIR}/.zplug.zsh" "${HOME}/.zplug.zsh"
 ln -snfv "${DOT_DIR}/.zshenv" "${HOME}/.zshenv"
 ln -snfv "${DOT_DIR}/.zshrc" "${HOME}/.zshrc"
 ln -snfv "${DOT_DIR}/.config/starship.toml" "${HOME}/.config/starship.toml"
+case "${OSTYPE}" in
+darwin*)
+  ln -snfv "${DOT_DIR}/settings/macos.sh" "${HOME}/.system.enviroment"
+  ln -snfv "${DOT_DIR}/settings/system.environment.plist" "${HOME}/Library/LaunchAgents/system.environment.plist"
+  ;;
+esac
 
 echo "Install modules..."
 
@@ -73,6 +79,8 @@ darwin*)
   sudo xcode-select --switch /Library/Developer/CommandLineTools
   xcode-select --install
   echo "CommandLineTools" "$(pkgutil --pkg-info=com.apple.pkg.CLTools_Executables | grep version)"
+
+  launchctl load "${HOME}/Library/LaunchAgents/system.environment.plist"
   ;;
 linux*)
   echo "install linuxbrew..."
