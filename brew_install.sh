@@ -27,6 +27,7 @@ formulas=(
   shellcheck
   sl
   tldr
+  yarn
 )
 
 cask_formulas=(
