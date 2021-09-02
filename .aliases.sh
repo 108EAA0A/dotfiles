@@ -2,9 +2,9 @@
 
 # ls
 alias ls='exa'
-alias ll='exa -ahl --git -I "node_modules|.git|.cache" --color=always --icons'
+alias ll='exa -ahl --git --color=always --icons'
 
-alias tree='ll -T'
+alias tree='ll -T --git-ignore'
 alias date='gdate'
 
 alias dc='docker compose'
