@@ -5,6 +5,7 @@ alias ls='exa'
 alias ll='exa -ahl --git -I "node_modules|.git|.cache" --color=always --icons'
 
 alias tree='ll -T'
+alias date='gdate'
 
 alias dc='docker compose'
 

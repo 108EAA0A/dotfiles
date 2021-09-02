@@ -4,6 +4,7 @@ formulas=(
   binutils
   bpytop
   cmake
+  coreutils
   curl
   exa
   ffmpeg
