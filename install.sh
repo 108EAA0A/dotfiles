@@ -1,6 +1,6 @@
 #!/bin/sh
 
-DOT_DIR="$(pwd)/dotfiles"
+DOT_DIR="${HOME}/dotfiles"
 
 case "${OSTYPE}" in
 linux*)
