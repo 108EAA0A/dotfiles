@@ -58,6 +58,7 @@ fi
 
 echo "Create dotfile links..."
 ln -snfv "${DOT_DIR}/.aliases.sh" "${HOME}/.aliases"
+ln -snfv "${DOT_DIR}/.gitconfig" "${HOME}/.gitconfig"
 ln -snfv "${DOT_DIR}/.zplug.zsh" "${HOME}/.zplug.zsh"
 ln -snfv "${DOT_DIR}/.zshenv" "${HOME}/.zshenv"
 ln -snfv "${DOT_DIR}/.zshrc" "${HOME}/.zshrc"
