@@ -1,5 +1,7 @@
 #!/bin/sh
 
+alias cat='bat'
+
 # ls
 alias ls='exa'
 alias ll='exa -ahl --git --color=always --icons'

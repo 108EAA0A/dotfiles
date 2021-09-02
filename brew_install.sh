@@ -1,6 +1,7 @@
 #!/bin/zsh
 
 formulas=(
+  bat
   binutils
   bpytop
   cmake
