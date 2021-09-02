@@ -4,6 +4,7 @@ formulas=(
   binutils
   bpytop
   cmake
+  composer
   coreutils
   curl
   exa
