@@ -63,6 +63,7 @@ ln -snfv "${DOT_DIR}/.zplug.zsh" "${HOME}/.zplug.zsh"
 ln -snfv "${DOT_DIR}/.zshenv" "${HOME}/.zshenv"
 ln -snfv "${DOT_DIR}/.zshrc" "${HOME}/.zshrc"
 ln -snfv "${DOT_DIR}/.config/starship.toml" "${HOME}/.config/starship.toml"
+ln -snfv "${DOT_DIR}/.quokka/config.json" "${HOME}/.quokka/config.json"
 case "${OSTYPE}" in
 darwin*)
   ln -snfv "${DOT_DIR}/settings/macos.sh" "${HOME}/.system.enviroment"
