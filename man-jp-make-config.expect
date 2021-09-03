@@ -1,0 +1,39 @@
+#!/usr/bin/expect
+
+set timeout 10
+
+spawn make config
+
+expect {
+    -exact {[/usr/share/man/ja_JP.UTF-8] ?:} {
+        send "/usr/local/share/man/ja_JP.UTF-8\n"
+        exp_continue
+    }
+    -exact {select [0..3] :} {
+        send "\n"
+        exp_continue
+    }
+    -exact {uname of page owner [root] ?:} {
+        send "\n"
+        exp_continue
+    }
+    -exact {group of page owner [root] ?:} {
+        send "wheel\n"
+        exp_continue
+    }
+    -exact {All OK? (Yes, [C]ontinue / No, [R]eselect) :} {
+        send "c\n"
+        exp_continue
+    }
+    -regexp {\[[yY]/[nN]\] \?:} {
+        send "\n"
+        exp_continue
+    }
+    -regexp {\(0\.\.\d+\) :} {
+        send "\n"
+        exp_continue
+    }
+    -exact "now you can \"make install\" as user root." {
+        exit 0
+    }
+}

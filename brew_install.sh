@@ -9,6 +9,7 @@ formulas=(
   coreutils
   curl
   exa
+  expect
   ffmpeg
   font-hackgen-nerd
   fzf
@@ -16,6 +17,7 @@ formulas=(
   gibo
   git-flow
   gh
+  groff
   hacker1024/hacker1024/coretemp
   imagemagick
   jq

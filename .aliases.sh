@@ -1,5 +1,7 @@
 #!/bin/sh
 
+alias eman='env LANG=C MANPATH=/usr/share/man man'
+
 alias cat='bat'
 
 # ls
