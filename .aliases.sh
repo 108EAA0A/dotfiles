@@ -8,7 +8,7 @@ alias cat='bat'
 alias ls='exa'
 alias ll='exa -ahl --git --color=always --icons'
 
-alias tree='ll -T --git-ignore'
+alias tree='ll -T --git-ignore -I ".git"'
 alias date='gdate'
 
 alias dc='docker compose'
