@@ -19,6 +19,7 @@ if ($? -eq $false) {
 
 choco -v
 if ($? -eq $false) {
+    Write-Error 'Failed install Chocolatey.'
     exit
 }
 
