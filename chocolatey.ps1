@@ -59,4 +59,5 @@ $choco_packages = @(
     'winrar'
 )
 
-$choco_packages -join ' ' | cinst -y
+$package_args = $choco_packages -join ' '
+cinst -y $package_args
