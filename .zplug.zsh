@@ -52,7 +52,7 @@ if ! zplug check --verbose; then
 fi
 
 # コマンドをリンクして、PATH に追加し、プラグインは読み込む
-zplug load --verbose
+zplug load
 
 # 補完候補の色づけ
 #export LSCOLORS=exfxcxdxbxegedabagacad
