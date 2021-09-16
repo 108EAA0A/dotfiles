@@ -35,6 +35,7 @@ esac
 
 if type brew &>/dev/null; then
   FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+  chmod +x $(brew --prefix asdf)/libexec/asdf.sh
   $(brew --prefix asdf)/libexec/asdf.sh
 fi
 

@@ -1,6 +1,7 @@
 #!/bin/zsh
 
 formulas=(
+  asdf
   bat
   binutils
   bpytop
@@ -13,10 +14,12 @@ formulas=(
   ffmpeg
   font-hackgen-nerd
   fzf
+  gawk
   gcc
   gibo
   git-flow
   gh
+  gpg
   groff
   hacker1024/hacker1024/coretemp
   imagemagick
