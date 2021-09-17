@@ -38,6 +38,7 @@ $choco_packages = @(
     'eartrumpet',
     'firefox',
     'foobar2000',
+    'gallery-dl',
     'gimp',
     'handbrake',
     'honeyview',

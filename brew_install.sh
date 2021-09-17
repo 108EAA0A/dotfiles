@@ -14,6 +14,7 @@ formulas=(
   ffmpeg
   font-hackgen-nerd
   fzf
+  gallery-dl
   gawk
   gcc
   gibo
@@ -33,6 +34,7 @@ formulas=(
   sl
   tldr
   yarn
+  youtube-dl
 )
 
 cask_formulas=(
