@@ -9,7 +9,7 @@ linux*)
   ;;
 esac
 
-if ! type git; then
+if ! type git &>/dev/null; then
   echo "install git"
 
   case "${OSTYPE}" in
@@ -41,14 +41,14 @@ esac
 echo "Check and Install zsh..."
 
 # install zsh and chsh
-if ! type zsh; then
+if ! type zsh &>/dev/null; then
   # for ubuntu
   sudo apt-get -y install zsh
   sudo chsh -s "$(command -v zsh)"
 fi
 
 # if not zsh to rerun this file in zsh
-if ! type source || ! type autoload; then
+if ! type source &>/dev/null || ! type autoload &>/dev/null; then
   zsh "${DOT_DIR}/install.sh"
   exit
 fi
@@ -103,7 +103,7 @@ if [[ -d ~/google-cloud-sdk ]]; then
 fi
 case "${OSTYPE}" in
 darwin*)
-  if uname -m | grep --quiet "arm64" 2>&1 > /dev/null ; then
+  if uname -m | grep --quiet "arm64" &>/dev/null; then
     GCLOUD_SDK_ARCHIVE="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-357.0.0-darwin-arm.tar.gz"
   else
     GCLOUD_SDK_ARCHIVE="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-357.0.0-darwin-x86_64.tar.gz"

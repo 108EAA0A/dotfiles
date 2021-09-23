@@ -12,7 +12,7 @@ generate_gitignore_global() {
 		(
 			cd "${GITIGNORE_CLONE_DIR}" || exit
 			git checkout --quiet master
-			git pull origin master 2>/dev/null | grep --quiet 'Already up to date.' 2>&1 > /dev/null
+			git pull origin master 2>/dev/null | grep --quiet 'Already up to date.' &>/dev/null
 		)
 		require_update=$?
 	fi
