@@ -19,4 +19,6 @@ alias gcan='git commit --amend --no-edit'
 alias gcann='gcan -n'
 alias gfpo='git push --force-with-lease origin'
 
+alias gengig='generate_gitignore_global'
+
 alias fixmp4='ffmpeg -c copy -bsf:a aac_adtstoasc'

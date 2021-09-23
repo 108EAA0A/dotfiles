@@ -18,6 +18,7 @@ jobs:
       - name: Run shellcheck
         run: |
           shellcheck ./.aliases.sh
+          shellcheck -e SC1071 ./.functions.zsh
           shellcheck -e SC1071 ./.zplug.zsh
           shellcheck -e SC1071 ./.zshenv
           shellcheck -e SC1071 ./.zshrc
