@@ -1,5 +1,7 @@
 #!/bin/zsh
 
+export HOMEBREW_NO_AUTO_UPDATE=1
+
 formulas=(
   asdf
   bat
@@ -49,6 +51,7 @@ cask_formulas=(
   visual-studio-code
 )
 
+brew update
 brew tap homebrew/cask-fonts
 brew tap jesseduffield/lazydocker
 
@@ -73,3 +76,5 @@ nodebrew install-binary latest
 GCC_VER=$(ls /usr/local/bin | grep -E "^g\+\+\-(\d+) \->" | awk '{print $1}' | sed -e "s/g++-//g")
 sudo ln -snfv /usr/local/bin/gcc-${GCC_VER} /usr/local/bin/gcc
 sudo ln -snfv /usr/local/bin/g++-${GCC_VER} /usr/local/bin/g++
+
+unset HOMEBREW_NO_AUTO_UPDATE
