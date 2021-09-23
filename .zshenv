@@ -8,7 +8,8 @@ export LC_ALL=ja_JP.UTF-8
 export TZ=Asia/Tokyo
 
 export PATH=/usr/local/bin:${PATH}
-export PATH=/usr/local/opt/binutils/bin:${PATH}
+export PATH="$(brew --prefix binutils)/bin:$PATH"
+export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 export PATH=${HOME}/.nodebrew/current/bin:${PATH}
 
 export XDG_CONFIG_HOME=${HOME}/.config
