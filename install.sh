@@ -28,9 +28,6 @@ fi
 echo "Locale settings..."
 
 case "${OSTYPE}" in
-darwin*)
-  # dummy
-  ;;
 linux*)
   # for ubuntu
   sudo apt install -y language-pack-ja

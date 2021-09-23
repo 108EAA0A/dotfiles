@@ -23,16 +23,11 @@ esac
 # ------------------------------
 # Auto complete
 # ------------------------------
-
 case "${OSTYPE}" in
 darwin*)
   source /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash
   ;;
-linux*)
-  # dummy
-  ;;
 esac
-
 if type brew &>/dev/null; then
   FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
   chmod +x $(brew --prefix asdf)/libexec/asdf.sh

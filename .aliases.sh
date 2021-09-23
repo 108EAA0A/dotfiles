@@ -4,7 +4,6 @@ alias eman='env LANG=C MANPATH=/usr/share/man man'
 
 alias cat='bat'
 
-# ls
 alias ls='exa'
 alias ll='exa -ahl --git --color=always --icons'
 
