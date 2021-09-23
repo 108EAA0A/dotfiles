@@ -21,6 +21,7 @@ formulas=(
   git-flow
   gh
   gpg
+  graphviz
   groff
   hacker1024/hacker1024/coretemp
   imagemagick
