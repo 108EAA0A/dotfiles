@@ -15,8 +15,7 @@ alias dc='docker compose'
 
 alias kusa='curl https://github-contributions-api.deno.dev/$(git config user.name).term'
 
-alias gca='git commit --amend'
-alias gcan='gca --no-edit'
+alias gcan='git commit --amend --no-edit'
 alias gcann='gcan -n'
 alias gfpo='git push --force-with-lease origin'
 

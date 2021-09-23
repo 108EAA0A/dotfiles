@@ -2,20 +2,63 @@
 	name = 108EAA0A
 	email = k_108e@outlook.jp
 [core]
-	excludesfile = /Users/108eaa0a/.gitignore_global
+	excludesfile = ~/.gitignore_global
+	editor = code --wait
+[credential]
+	helper = osxkeychain
+[include]
+	path = ~/.gitconfig.local
+[color]
+	ui = auto
+[commit]
+	template = ~/.stCommitMsg
+[rebase]
+	autosquash = true
+[push]
+	default = current
+[rerere]
+	enabled = true
+
+[alias]
+	alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
+	st = status
+	amend = commit --amend
+	fixup = commit --fixup
+	info = remote show origin
+	graph = log --graph -10 --branches --remotes --tags  --format=format:'%Cgreen%h %Creset• %<(75,trunc)%s (%cN, %ar) %Cred%d' --date-order
+	l = log --date=short --pretty=format:'%C(yellow)%h %Cgreen%cd %Cblue%cn %Creset%s'
+	ll = log --stat --decorate=short --pretty=format:'%C(yellow)%h %Cgreen%cr %Cblue%cn%Cred%d %Creset%s %C(cyan)%b'
+	lg = log --graph --date=short --decorate=short --pretty=format:'%C(yellow)%h %Cgreen%cd %Cblue%cn%Cred%d %Creset%s'
+	lm = log --merges --pretty=format:'%C(yellow)%h %Cgreen%ci %Cblue%cn%Cred%d %Creset%s %C(cyan)%b'
+
+[diff]
+	tool = vscode
+[difftool "vscode"]
+	cmd = code --wait --diff \"$LOCAL\" \"$REMOTE\"
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
+
+[merge]
+	tool = vscode
+[mergetool]
+	prompt = false
+	keepBackup = false
+[mergetool "vscode"]
+	cmd = code --wait \"$MERGED\"
+	trustExitCode = true
 [mergetool "sourcetree"]
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
-[commit]
-	template = /Users/108eaa0a/.stCommitMsg
+
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+
+[github]
+	user = 108EAA0A
 [url "github:"]
-    InsteadOf = https://github.com/
-    InsteadOf = git@github.com:
+	InsteadOf = https://github.com/
+	InsteadOf = git@github.com:
