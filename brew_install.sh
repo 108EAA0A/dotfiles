@@ -21,11 +21,13 @@ formulas=(
   gcc
   gibo
   git-flow
+  git-secrets
   gh
   gpg
   graphviz
   groff
   hacker1024/hacker1024/coretemp
+  htop
   imagemagick
   jq
   lazydocker
@@ -33,6 +35,7 @@ formulas=(
   nmap
   nodebrew
   nkf
+  php
   shellcheck
   sl
   tldr
@@ -48,8 +51,10 @@ cask_formulas=(
   font-ricty-diminished
   keycastr
   monitorcontrol
+  parallels
   slack
   visual-studio-code
+  vlc
 )
 
 brew update
