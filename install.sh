@@ -95,7 +95,7 @@ brew doctor
 source "${DOT_DIR}/brew_install.sh"
 
 echo "install node modules..."
-npm i -g typescript
+npm i -g typescript ts-node create-react-app
 
 echo "Loading dotfiles..."
 source "${DOT_DIR}/.zshrc"
