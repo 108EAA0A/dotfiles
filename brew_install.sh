@@ -43,6 +43,7 @@ formulas=(
 cask_formulas=(
   docker
   google-chrome
+  google-cloud-sdk
   graphiql
   font-ricty-diminished
   keycastr

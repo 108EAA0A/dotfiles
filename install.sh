@@ -97,30 +97,6 @@ source "${DOT_DIR}/brew_install.sh"
 echo "install node modules..."
 npm i -g typescript
 
-echo "install Google Cloud SDK..."
-if [[ -d ~/google-cloud-sdk ]]; then
-  rm -rf ~/google-cloud-sdk
-fi
-case "${OSTYPE}" in
-darwin*)
-  if uname -m | grep --quiet "arm64" &>/dev/null; then
-    GCLOUD_SDK_ARCHIVE="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-357.0.0-darwin-arm.tar.gz"
-  else
-    GCLOUD_SDK_ARCHIVE="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-357.0.0-darwin-x86_64.tar.gz"
-  fi
-  ;;
-linux*)
-  if [[ "$(getconf LONG_BIT)" == 64 ]]; then
-    GCLOUD_SDK_ARCHIVE="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-357.0.0-linux-x86_64.tar.gz"
-  else
-    GCLOUD_SDK_ARCHIVE="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-357.0.0-linux-x86.tar.gz"
-  fi
-  ;;
-esac
-curl -fsSL "${GCLOUD_SDK_ARCHIVE}" | tar xf - -C ~
-source ~/google-cloud-sdk/install.sh
-~/google-cloud-sdk/bin/gcloud init
-
 echo "Loading dotfiles..."
 source "${DOT_DIR}/.zshrc"
 
