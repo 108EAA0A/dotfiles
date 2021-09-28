@@ -64,8 +64,8 @@ ln -snfv "${DOT_DIR}/.config/starship.toml" "${HOME}/.config/starship.toml"
 ln -snfv "${DOT_DIR}/.quokka/config.json" "${HOME}/.quokka/config.json"
 case "${OSTYPE}" in
 darwin*)
-  ln -snfv "${DOT_DIR}/settings/macos.sh" "${HOME}/.system.enviroment"
-  ln -snfv "${DOT_DIR}/settings/system.environment.plist" "${HOME}/Library/LaunchAgents/system.environment.plist"
+  ln -snfv "${DOT_DIR}/macos/macos.sh" "${HOME}/.system.enviroment"
+  ln -snfv "${DOT_DIR}/macos/system.environment.plist" "${HOME}/Library/LaunchAgents/system.environment.plist"
   ;;
 esac
 
