@@ -97,6 +97,9 @@ source "${DOT_DIR}/brew_install.sh"
 echo "install node modules..."
 npm i -g typescript ts-node create-react-app
 
+echo "install vscode extensions..."
+source "${DOT_DIR}/vscode/extensions.sh"
+
 echo "Loading dotfiles..."
 source "${DOT_DIR}/.zshrc"
 
