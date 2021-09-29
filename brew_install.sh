@@ -32,6 +32,7 @@ formulas=(
   jq
   lazydocker
   lazygit
+  mkvtoolnix
   nmap
   nodebrew
   nkf
@@ -50,6 +51,7 @@ cask_formulas=(
   graphiql
   font-ricty-diminished
   keycastr
+  mkvtoolnix
   monitorcontrol
   parallels
   slack
