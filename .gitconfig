@@ -21,6 +21,7 @@
 
 [alias]
 	alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
+	ls = ls-files
 	st = status
 	amend = commit --amend
 	fixup = commit --fixup
