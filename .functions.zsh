@@ -6,7 +6,7 @@ generate_gitignore_global() {
 
 	local require_update=0
 	if [[ ! -d "${GITIGNORE_CLONE_DIR}" ]]; then
-		git clone https://github.com/github/gitignore.git "${GITIGNORE_CLONE_DIR}"
+		git clone --depth 1 https://github.com/github/gitignore.git "${GITIGNORE_CLONE_DIR}"
 		require_update=1
 	else
 		(
