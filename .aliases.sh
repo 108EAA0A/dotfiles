@@ -3,12 +3,13 @@
 alias eman='env LANG=C MANPATH=/usr/share/man man'
 
 alias cat='bat'
+alias date='gdate'
+alias top='htop'
 
 alias ls='exa'
 alias ll='exa -ahl --git --color=always --icons'
 
 alias tree='ll -T --git-ignore -I ".git"'
-alias date='gdate'
 
 alias dc='docker compose'
 
