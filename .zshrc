@@ -2,6 +2,7 @@
 
 setopt hist_ignore_dups
 setopt hist_no_store
+setopt share_history
 
 setopt auto_list
 setopt auto_menu
