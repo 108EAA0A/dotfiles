@@ -44,7 +44,7 @@ formulas=(
   youtube-dl
 )
 
-cask_formulas=(
+casks=(
   docker
   google-chrome
   google-cloud-sdk
@@ -69,8 +69,8 @@ done
 
 case "${OSTYPE}" in
 darwin*)
-  for formula in ${cask_formulas[@]}; do
-    brew install --cask ${formula}
+  for cask in ${casks[@]}; do
+    brew install --cask ${cask}
   done
 
   GCC_VER=$(ls /usr/local/bin | grep -E "^g\+\+\-(\d+) \->" | awk '{print $1}' | sed -e "s/g++-//g")
