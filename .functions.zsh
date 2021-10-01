@@ -5,6 +5,13 @@ generate_gitignore_global() {
 	local GITIGNORE_GLOBAL="${HOME}/.gitignore_global"
 
 	local require_update=0
+
+	for arg in "$@"; do
+		if [[ "${arg}" == "-f" ]]; then
+			require_update=1
+		fi
+	done
+
 	if [[ ! -d "${GITIGNORE_CLONE_DIR}" ]]; then
 		git clone --depth 1 https://github.com/github/gitignore.git "${GITIGNORE_CLONE_DIR}"
 		require_update=1
@@ -44,6 +51,8 @@ generate_gitignore_global() {
 		)
 		echo -e "${IGNORE_PART}\n" >> "${GITIGNORE_GLOBAL}"
 	done
+
+	echo "Updated ${GITIGNORE_GLOBAL}"
 }
 
 autoload -Uz generate_gitignore_global
