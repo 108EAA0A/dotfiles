@@ -4,13 +4,13 @@ Function Is-RunAsAdmin {
     ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
 }
 
+if (-not (Is-RunAsAdmin)) {
+    Write-Error 'Administrator authorization is required.'
+    exit
+}
+
 choco -v
 if ($? -eq $false) {
-    if (-not (Is-RunAsAdmin)) {
-        Write-Error 'Administrator authorization is required.'
-        exit
-    }
-
     # install chocolatey
     Set-ExecutionPolicy Bypass -Scope Process -Force
     [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072
