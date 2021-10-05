@@ -44,6 +44,7 @@ $choco_packages = @(
     'honeyview',
     'mkvtoolnix',
     'mp3tag',
+    'nodejs',
     'paint.net',
     'powertoys',
     'procexp',
