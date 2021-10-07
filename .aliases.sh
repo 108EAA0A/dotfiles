@@ -14,6 +14,7 @@ alias tree='ll -T --git-ignore -I ".git"'
 alias dc='docker compose'
 
 alias kusa='curl https://github-contributions-api.deno.dev/$(git config user.name).term'
+alias tenki='wttr'
 
 alias gcan='git commit --amend --no-edit'
 alias gcann='gcan -n'

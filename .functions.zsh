@@ -55,4 +55,15 @@ generate_gitignore_global() {
 	echo "Updated ${GITIGNORE_GLOBAL}"
 }
 
+wttr() {
+	local location="${1// /+}"
+	shift 2>/dev/null
+	local args=""
+	for p in "$@"; do
+		args+=" --data-urlencode $p "
+	done
+	curl -fsSL -H "Accept-Language: ${LANG%_*}" $args --compressed "wttr.in/${location}"
+}
+
 autoload -Uz generate_gitignore_global
+autoload -Uz wttr
