@@ -46,6 +46,7 @@ formulas=(
 
 casks=(
   docker
+  dotnet-sdk
   google-chrome
   google-cloud-sdk
   graphiql
