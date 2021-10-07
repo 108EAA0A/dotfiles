@@ -58,6 +58,7 @@ casks=(
   slack
   visual-studio-code
   vlc
+  wget
 )
 
 brew update
