@@ -17,7 +17,6 @@ extensions=(
   christian-kohler.path-intellisense
   chrmarti.regex
   ckolkman.vscode-postgres
-  CoenraadS.bracket-pair-colorizer
   DavidAnson.vscode-markdownlint
   dbaeumer.jshint
   dbaeumer.vscode-eslint
@@ -26,6 +25,7 @@ extensions=(
   dsznajder.es7-react-js-snippets
   eamodio.gitlens
   ecmel.vscode-html-css
+  EditorConfig.EditorConfig
   eg2.vscode-npm-script
   esbenp.prettier-vscode
   fabiospampinato.vscode-diff
@@ -68,21 +68,28 @@ extensions=(
   ms-python.python
   ms-python.vscode-pylance
   ms-toolsai.jupyter
-  ms-toolsai.jupyter-keymap
+  ms-toolsai.jupyter-renderers
   ms-vscode-remote.remote-containers
+  ms-vscode-remote.remote-ssh
+  ms-vscode-remote.remote-ssh-edit
   ms-vscode-remote.remote-wsl
+  ms-vscode-remote.vscode-remote-extensionpack
   ms-vscode.cmake-tools
   ms-vscode.cpptools
   ms-vscode.powershell
   ms-vscode.vscode-typescript-tslint-plugin
   ms-vsliveshare.vsliveshare
+  ms-vsliveshare.vsliveshare-audio
   ms-vsts.team
+  msjsdiag.debugger-for-chrome
   mtxr.sqltools
   mutantdino.resourcemonitor
   mxschmitt.postscript
   naumovs.color-highlight
+  nodesource.vscode-for-node-js-development-pack
   NuclleaR.vscode-extension-auto-import
   oderwat.indent-rainbow
+  pflannery.vscode-versionlens
   redhat.java
   redhat.vscode-commons
   redhat.vscode-yaml
@@ -90,6 +97,7 @@ extensions=(
   rust-lang.rust
   saikou9901.evilinspector
   shardulm94.trailing-spaces
+  slevesque.vscode-zipexplorer
   steoates.autoimport
   TabNine.tabnine-vscode
   TeamHub.teamhub
@@ -105,10 +113,12 @@ extensions=(
   vscjava.vscode-maven
   waderyan.nodejs-extension-pack
   WallabyJs.quokka-vscode
+  wix.vscode-import-cost
   wraith13.wandbox-vscode
   xabikos.JavaScriptSnippets
   yzhang.markdown-all-in-one
   zgm.cuesheet
+  zh9528.file-size
   Zignd.html-css-class-completion
 )
 
