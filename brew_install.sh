@@ -36,6 +36,7 @@ formulas=(
   nmap
   nodebrew
   nkf
+  pandoc
   php
   shellcheck
   sl
