@@ -15,6 +15,8 @@ alias dc='docker compose'
 
 alias kusa='curl https://github-contributions-api.deno.dev/$(git config user.name).term'
 alias tenki='wttr'
+alias ttenki='telnet graph.no 79'
+alias starwars='telnet towel.blinkenlights.nl'
 
 alias gcan='git commit --amend --no-edit'
 alias gcann='gcan -n'

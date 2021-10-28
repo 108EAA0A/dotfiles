@@ -40,6 +40,7 @@ formulas=(
   php
   shellcheck
   sl
+  telnet
   tldr
   yarn
   youtube-dl
