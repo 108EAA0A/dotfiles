@@ -42,6 +42,7 @@ formulas=(
   sl
   telnet
   tldr
+  wget
   yarn
   youtube-dl
 )
@@ -60,7 +61,6 @@ casks=(
   slack
   visual-studio-code
   vlc
-  wget
 )
 
 brew update
