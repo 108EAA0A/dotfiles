@@ -54,6 +54,7 @@ if ! type source &>/dev/null || ! type autoload &>/dev/null; then
 fi
 
 echo "Create dotfile links..."
+ln -snfv "${DOT_DIR}/.asdfrc" "${HOME}/.asdfrc"
 ln -snfv "${DOT_DIR}/.aliases.sh" "${HOME}/.aliases"
 ln -snfv "${DOT_DIR}/.functions.zsh" "${HOME}/.functions.zsh"
 ln -snfv "${DOT_DIR}/.gitconfig" "${HOME}/.gitconfig"
