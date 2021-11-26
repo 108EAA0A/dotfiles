@@ -1,7 +1,18 @@
 #!/bin/sh
 
+if [ "$(uname)" != "Darwin" ]; then
+  echo 'Not macOS!'
+  exit
+fi
+
+# Disable the sound effects on boot
+sudo nvram SystemAudioVolume=" "
+
 # Restart automatically if the computer freezes
 sudo systemsetup -setrestartfreeze on
+
+chflags nohidden ~/Library    # ~/Library ディレクトリを見えるようにする
+sudo chflags nohidden /Volumes    # /Volumes ディレクトリを見えるようにする
 
 # Show icons for hard drives, servers, and removable media on the desktop
 defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
