@@ -9,10 +9,20 @@ linux*)
   ;;
 esac
 
-if ! type git &>/dev/null; then
+git_result=0
+$(git version &>/dev/null) || git_result=$?
+if [! type git &>/dev/null] || [ $git_result != 0 ]; then
   echo "install git"
 
   case "${OSTYPE}" in
+  darwin*)
+    echo "install CommandLineTools..."
+    sudo xcode-select --switch /Library/Developer/CommandLineTools
+    xcode-select --install
+    echo "CommandLineTools" "$(pkgutil --pkg-info=com.apple.pkg.CLTools_Executables | grep version)"
+
+    launchctl load "${HOME}/Library/LaunchAgents/system.environment.plist"
+    ;;
   linux*)
     # for ubuntu
     sudo apt-get -y install git
@@ -75,14 +85,6 @@ echo "Install modules..."
 sh -c "$(curl -fsSL https://starship.rs/install.sh)" -- -y
 
 case "${OSTYPE}" in
-darwin*)
-  echo "install CommandLineTools..."
-  sudo xcode-select --switch /Library/Developer/CommandLineTools
-  xcode-select --install
-  echo "CommandLineTools" "$(pkgutil --pkg-info=com.apple.pkg.CLTools_Executables | grep version)"
-
-  launchctl load "${HOME}/Library/LaunchAgents/system.environment.plist"
-  ;;
 linux*)
   echo "install linuxbrew..."
   NONINTERACTIVE=1 bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
