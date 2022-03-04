@@ -85,8 +85,6 @@ esac
 
 echo "Install modules..."
 
-sh -c "$(curl -fsSL https://starship.rs/install.sh)" -- -y
-
 case "${OSTYPE}" in
 linux*)
   echo "install linuxbrew..."
@@ -96,7 +94,6 @@ linux*)
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
   ;;
 esac
-brew doctor
 
 source "${DOT_DIR}/brew_install.sh"
 source "${DOT_DIR}/asdf_install.sh"

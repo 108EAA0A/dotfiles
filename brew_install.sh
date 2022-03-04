@@ -41,6 +41,7 @@ formulas=(
   rename
   shellcheck
   sl
+  starship
   telnet
   tldr
   uniutils
