@@ -4,6 +4,7 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 
 formulas=(
   asdf
+  bash-completion
   bat
   binutils
   bpytop
@@ -53,18 +54,27 @@ formulas=(
 casks=(
   docker
   dotnet-sdk
+  font-ricty-diminished
+  github
   google-chrome
   google-cloud-sdk
   graphiql
-  font-ricty-diminished
+  iterm2
+  jetbrains-toolbox
   keycastr
+  libreoffice
+  firefox
   mkvtoolnix
   monitorcontrol
   ngrok
   parallels
+  postman
   slack
+  sourcetree
+  steam
   visual-studio-code
   vlc
+  zoom
 )
 
 brew update
