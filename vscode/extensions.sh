@@ -51,6 +51,7 @@ extensions=(
   jasonnutter.search-node-modules
   jebbs.plantuml
   joaompinto.vscode-graphviz
+  kisstkondoros.vscode-codemetrics
   leizongmin.node-module-intellisense
   lihui.vs-color-picker
   marp-team.marp-vscode
@@ -59,6 +60,8 @@ extensions=(
   Mikael.Angular-BeastCode
   mkaufman.HTMLHint
   mrmlnc.vscode-apache
+  ms-azuretools.vscode-azurefunctions
+  ms-azuretools.vscode-azureresourcegroups
   ms-azuretools.vscode-docker
   MS-CEINTL.vscode-language-pack-ja
   ms-dotnettools.csharp
@@ -74,6 +77,7 @@ extensions=(
   ms-vscode-remote.remote-ssh-edit
   ms-vscode-remote.remote-wsl
   ms-vscode-remote.vscode-remote-extensionpack
+  ms-vscode.azure-account
   ms-vscode.cmake-tools
   ms-vscode.cpptools
   ms-vscode.powershell
@@ -90,12 +94,14 @@ extensions=(
   NuclleaR.vscode-extension-auto-import
   oderwat.indent-rainbow
   pflannery.vscode-versionlens
+  pmneo.tsimporter
   redhat.java
   redhat.vscode-commons
   redhat.vscode-yaml
   RomanPeshkov.vscode-text-tables
   rust-lang.rust
   saikou9901.evilinspector
+  Shan.code-settings-sync
   shardulm94.trailing-spaces
   slevesque.vscode-zipexplorer
   steoates.autoimport
