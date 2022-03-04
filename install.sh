@@ -94,6 +94,7 @@ esac
 brew doctor
 
 source "${DOT_DIR}/brew_install.sh"
+source "${DOT_DIR}/asdf_install.sh"
 
 echo "install node modules..."
 npm i -g typescript ts-node create-react-app

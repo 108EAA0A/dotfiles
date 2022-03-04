@@ -34,7 +34,6 @@ formulas=(
   lazygit
   mkvtoolnix
   nmap
-  nodebrew
   nkf
   pandoc
   php
@@ -85,8 +84,5 @@ linux*)
   brew install docker
   ;;
 esac
-
-nodebrew setup
-nodebrew install-binary latest
 
 unset HOMEBREW_NO_AUTO_UPDATE
