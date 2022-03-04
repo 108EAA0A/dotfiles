@@ -49,6 +49,7 @@ formulas=(
   wget
   yarn
   youtube-dl
+  yt-dlp
 )
 
 casks=(
