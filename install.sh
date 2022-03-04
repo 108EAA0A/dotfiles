@@ -11,7 +11,7 @@ esac
 
 git_result=0
 $(git version &>/dev/null) || git_result=$?
-if [! type git &>/dev/null] || [ $git_result != 0 ]; then
+if [ ! type git &>/dev/null ] || [ $git_result != 0 ]; then
   echo "install git"
 
   case "${OSTYPE}" in
