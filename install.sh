@@ -94,9 +94,20 @@ darwin*)
   ;;
 esac
 
-echo "Install modules..."
-
 case "${OSTYPE}" in
+darwin*)
+  echo "Install brew..."
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  if [[ "$(/usr/bin/uname -m)" == "arm64" ]]; then
+    # On ARM macOS, this script installs to /opt/homebrew only
+    HOMEBREW_PREFIX="/opt/homebrew"
+  else
+    # On Intel macOS, this script installs to /usr/local only
+    HOMEBREW_PREFIX="/usr/local"
+  fi
+  echo 'eval "$(${HOMEBREW_PREFIX}/bin/brew shellenv)"' >> "${HOME}/.zprofile"
+  eval "$(${HOMEBREW_PREFIX}/bin/brew shellenv)"
+  ;;
 linux*)
   echo "install linuxbrew..."
   NONINTERACTIVE=1 bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -106,6 +117,7 @@ linux*)
   ;;
 esac
 
+echo "Install modules..."
 source "${DOT_DIR}/brew_install.sh"
 source "${DOT_DIR}/asdf_install.sh"
 
