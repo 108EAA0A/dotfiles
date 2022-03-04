@@ -10,8 +10,8 @@ linux*)
 esac
 
 git_result=0
-$(git version &>/dev/null) || git_result=$?
-if [ ! type git &>/dev/null ] || [ $git_result != 0 ]; then
+type git &>/dev/null || git version &>/dev/null || git_result=$?
+if [ $git_result != 0 ]; then
   echo "install git"
 
   case "${OSTYPE}" in
@@ -69,7 +69,7 @@ if [ ! -e "${HOME}/.ssh/id_rsa" ]; then
   pbcopy < "${HOME}/.ssh/id_rsa.pub"
   echo "Copied ssh public key! setting for GitHub and type Enter:"
   open https://github.com/settings/ssh/new
-  read Wait
+  read -r _
 fi
 
 echo "Create dotfile links..."
@@ -107,7 +107,7 @@ darwin*)
   fi
   code="$(${HOMEBREW_PREFIX}/bin/brew shellenv)"
   echo "eval \"${code}\"" >> "${HOME}/.zprofile"
-  eval $code
+  eval "$code"
   ;;
 linux*)
   echo "install linuxbrew..."
