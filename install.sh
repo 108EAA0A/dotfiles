@@ -71,11 +71,14 @@ ln -snfv "${DOT_DIR}/.gitconfig" "${HOME}/.gitconfig"
 ln -snfv "${DOT_DIR}/.zplug.zsh" "${HOME}/.zplug.zsh"
 ln -snfv "${DOT_DIR}/.zshenv" "${HOME}/.zshenv"
 ln -snfv "${DOT_DIR}/.zshrc" "${HOME}/.zshrc"
+mkdir -p "${HOME}/.config"
 ln -snfv "${DOT_DIR}/.config/starship.toml" "${HOME}/.config/starship.toml"
+mkdir -p "${HOME}/.quokka"
 ln -snfv "${DOT_DIR}/.quokka/config.json" "${HOME}/.quokka/config.json"
 case "${OSTYPE}" in
 darwin*)
   ln -snfv "${DOT_DIR}/macos/macos.sh" "${HOME}/.system.enviroment"
+  mkdir -p "${HOME}/Library/LaunchAgents"
   ln -snfv "${DOT_DIR}/macos/system.environment.plist" "${HOME}/Library/LaunchAgents/system.environment.plist"
   ;;
 esac
