@@ -126,7 +126,7 @@ echo "Loading dotfiles..."
 source "${DOT_DIR}/.zshrc"
 
 echo "install node modules..."
-npm i -g typescript ts-node create-react-app
+npm i -g typescript ts-node create-react-app jshint
 
 # echo "install vscode extensions..."
 # source "${DOT_DIR}/vscode/extensions.sh"
