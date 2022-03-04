@@ -36,11 +36,14 @@ formulas=(
   nmap
   nkf
   pandoc
+  pgcli
   php
+  rename
   shellcheck
   sl
   telnet
   tldr
+  uniutils
   wget
   yarn
   youtube-dl
@@ -56,6 +59,7 @@ casks=(
   keycastr
   mkvtoolnix
   monitorcontrol
+  ngrok
   parallels
   slack
   visual-studio-code
