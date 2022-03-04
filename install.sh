@@ -63,6 +63,15 @@ if ! type source &>/dev/null || ! type autoload &>/dev/null; then
   exit
 fi
 
+if [ ! -e "${HOME}/.ssh/id_rsa" ]; then
+  echo "Genereate ssh key..."
+  ssh-keygen -t rsa -b 4096
+  pbcopy < "${HOME}/.ssh/id_rsa.pub"
+  echo "Copied ssh public key! setting for GitHub and type Enter:"
+  # TODO: open browser
+  read Wait
+fi
+
 echo "Create dotfile links..."
 ln -snfv "${DOT_DIR}/.asdfrc" "${HOME}/.asdfrc"
 ln -snfv "${DOT_DIR}/.aliases.sh" "${HOME}/.aliases"
