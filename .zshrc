@@ -26,7 +26,7 @@ esac
 # ------------------------------
 case "${OSTYPE}" in
 darwin*)
-  source /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash
+  source /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.zsh
   ;;
 esac
 if type brew &>/dev/null; then
