@@ -68,7 +68,7 @@ if [ ! -e "${HOME}/.ssh/id_rsa" ]; then
   ssh-keygen -t rsa -b 4096
   pbcopy < "${HOME}/.ssh/id_rsa.pub"
   echo "Copied ssh public key! setting for GitHub and type Enter:"
-  # TODO: open browser
+  open https://github.com/settings/ssh/new
   read Wait
 fi
 
@@ -105,8 +105,9 @@ darwin*)
     # On Intel macOS, this script installs to /usr/local only
     HOMEBREW_PREFIX="/usr/local"
   fi
-  echo 'eval "$(${HOMEBREW_PREFIX}/bin/brew shellenv)"' >> "${HOME}/.zprofile"
-  eval "$(${HOMEBREW_PREFIX}/bin/brew shellenv)"
+  code="$(${HOMEBREW_PREFIX}/bin/brew shellenv)"
+  echo "eval \"${code}\"" >> "${HOME}/.zprofile"
+  eval $code
   ;;
 linux*)
   echo "install linuxbrew..."
@@ -121,14 +122,14 @@ echo "Install modules..."
 source "${DOT_DIR}/brew_install.sh"
 source "${DOT_DIR}/asdf_install.sh"
 
+echo "Loading dotfiles..."
+source "${DOT_DIR}/.zshrc"
+
 echo "install node modules..."
 npm i -g typescript ts-node create-react-app
 
 # echo "install vscode extensions..."
 # source "${DOT_DIR}/vscode/extensions.sh"
-
-echo "Loading dotfiles..."
-source "${DOT_DIR}/.zshrc"
 
 case "${OSTYPE}" in
 darwin*)
