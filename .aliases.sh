@@ -1,6 +1,7 @@
 #!/bin/sh
 
-alias eman='env LANG=C MANPATH=/usr/share/man man'
+alias eman='env LANG=C command man'
+alias man='env LANG=ja_JP.UTF-8 MANPATH=/usr/local/share/man/ja_JP.UTF-8 command man'
 
 alias cat='bat'
 alias date='gdate'
