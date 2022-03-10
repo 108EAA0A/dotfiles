@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/zsh -eux
 
 extensions=(
   abusaidm.html-snippets

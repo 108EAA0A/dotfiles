@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/sh -eux
 
 DOT_DIR="${HOME}/dotfiles"
 
@@ -119,8 +119,8 @@ linux*)
 esac
 
 echo "Install modules..."
-source "${DOT_DIR}/brew_install.sh"
-source "${DOT_DIR}/asdf_install.sh"
+source "${DOT_DIR}/brew_install.zsh"
+source "${DOT_DIR}/asdf_install.zsh"
 
 echo "Loading dotfiles..."
 source "${DOT_DIR}/.zshrc"
@@ -129,7 +129,7 @@ echo "install node modules..."
 npm i -g typescript ts-node create-react-app jshint
 
 # echo "install vscode extensions..."
-# source "${DOT_DIR}/vscode/extensions.sh"
+# source "${DOT_DIR}/vscode/extensions.zsh"
 
 case "${OSTYPE}" in
 darwin*)

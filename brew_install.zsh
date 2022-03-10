@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/zsh -eux
 
 export HOMEBREW_NO_AUTO_UPDATE=1
 

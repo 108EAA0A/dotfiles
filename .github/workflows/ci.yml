@@ -18,9 +18,12 @@ jobs:
       - name: Run shellcheck
         run: |
           shellcheck ./.aliases.sh
+          shellcheck ./macos/macos.sh
+          shellcheck -e SC1071 ./vscode/extensions.zsh
           shellcheck -e SC1071 ./.functions.zsh
           shellcheck -e SC1071 ./.zplug.zsh
           shellcheck -e SC1071 ./.zshenv
           shellcheck -e SC1071 ./.zshrc
-          shellcheck -e SC1071 ./brew_install.sh
+          shellcheck -e SC1071 ./asdf_install.zsh
+          shellcheck -e SC1071 ./brew_install.zsh
           shellcheck -e SC1090 -e SC1091 -e SC2039 -e SC3028 -e SC3046 ./install.sh
