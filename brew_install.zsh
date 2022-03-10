@@ -102,3 +102,5 @@ linux*)
 esac
 
 unset HOMEBREW_NO_AUTO_UPDATE
+
+eval "$(starship init zsh)"

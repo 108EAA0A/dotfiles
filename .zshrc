@@ -8,13 +8,9 @@ setopt auto_list
 setopt auto_menu
 
 # ------------------------------
-# Init Starship
+# Init Shell
 # ------------------------------
 eval "$(starship init zsh)"
-
-# ------------------------------
-# Init linuxbrew
-# ------------------------------
 case "${OSTYPE}" in
 linux*)
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
