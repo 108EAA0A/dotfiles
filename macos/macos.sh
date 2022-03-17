@@ -44,6 +44,9 @@ sudo chflags nohidden /Volumes
 # FIXME: Modify the number of items in the Open Recent menu
 defaults write -g 'NSRecentDocumentsLimit' -int 0
 
+# 最近使ったアプリを非表示
+defaults write com.apple.dock show-recents -bool false
+
 # スクロールバーを常時表示
 defaults write -g AppleShowScrollBars -string "Always"
 
