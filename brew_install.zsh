@@ -33,6 +33,7 @@ formulas=(
   jq
   lazydocker
   lazygit
+  libpq
   mkvtoolnix
   nmap
   nkf
