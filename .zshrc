@@ -27,8 +27,7 @@ darwin*)
 esac
 if type brew &>/dev/null; then
   FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
-  chmod +x $(brew --prefix asdf)/libexec/asdf.sh
-  $(brew --prefix asdf)/libexec/asdf.sh
+  source $(brew --prefix asdf)/libexec/asdf.sh
   source $(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
   source $(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
 fi
