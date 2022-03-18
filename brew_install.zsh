@@ -64,6 +64,7 @@ casks=(
   iterm2
   jetbrains-toolbox
   keycastr
+  kindle
   libreoffice
   firefox
   mkvtoolnix
