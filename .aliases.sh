@@ -12,7 +12,13 @@ alias ll='exa -ahl --git --color=always --icons'
 
 alias tree='ll -T --git-ignore -I ".git"'
 
+alias awsp='export AWS_PROFILE=$(grep "^\[.*\]" ~/.aws/credentials | tr -d "[" | tr -d "]" | fzf --reverse)'
+# shellcheck disable=SC2142
+alias gcpp='gcloud config set project $(gcloud projects list | fzf --reverse | awk "{print \$1}")'
+
 alias dc='docker compose'
+alias de='docker exec -it $(docker ps | fzf --reverse | cut -d " " -f 1)'
+alias dl='docker logs -f  $(docker ps | fzf --reverse | cut -d " " -f 1)'
 
 alias kusa='curl https://github-contributions-api.deno.dev/$(git config user.name).term'
 alias tenki='wttr'
