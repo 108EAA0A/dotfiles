@@ -54,6 +54,7 @@ formulas=(
 )
 
 casks=(
+  dbeaver-community
   docker
   dotnet-sdk
   font-ricty-diminished
