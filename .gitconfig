@@ -21,6 +21,7 @@
 
 [alias]
 	alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
+	sw = "!f () { git switch $(git branch $1 | grep -v 'HEAD' | fzf --reverse | sed 's@remotes/origin/@@' | cut -c 3-); }; f"
 	ls = ls-files
 	st = status
 	amend = commit --amend
