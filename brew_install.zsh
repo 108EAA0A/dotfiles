@@ -21,6 +21,7 @@ formulas=(
   gawk
   gcc
   gibo
+  git-extras
   git-flow
   git-secrets
   gh
