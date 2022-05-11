@@ -25,6 +25,7 @@ formulas=(
   git-flow
   git-secrets
   gh
+  golangci-lint
   gpg
   graphviz
   groff
