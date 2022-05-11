@@ -95,9 +95,9 @@ darwin*)
     brew install --cask ${cask}
   done
 
-  GCC_VER=$(ls /usr/local/bin | grep -E "^g\+\+\-(\d+) \->" | awk '{print $1}' | sed -e "s/g++-//g")
-  sudo ln -snfv /usr/local/bin/gcc-${GCC_VER} /usr/local/bin/gcc
-  sudo ln -snfv /usr/local/bin/g++-${GCC_VER} /usr/local/bin/g++
+  GCC_VER=$(ls $(brew --prefix)/bin | grep -E "^g\+\+\-(\d+) \->" | awk '{print $1}' | sed -e "s/g++-//g")
+  sudo ln -snfv $(brew --prefix gcc)/gcc-${GCC_VER} /usr/local/bin/gcc
+  sudo ln -snfv $(brew --prefix gcc)/g++-${GCC_VER} /usr/local/bin/g++
   ;;
 linux*)
   brew install docker
