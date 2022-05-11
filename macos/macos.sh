@@ -5,7 +5,7 @@ if [ "$(uname)" != "Darwin" ]; then
   exit
 fi
 
-# Disable the sound effects on boot
+# FIXME: Disable the sound effects on boot
 sudo nvram SystemAudioVolume=" "
 
 # Restart automatically if the computer freezes
@@ -31,6 +31,9 @@ defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 # show hidden files in finder
 defaults write com.apple.finder AppleShowAllFiles TRUE
 
+# ゴミ箱を空にする前の警告の無効化
+defaults write com.apple.finder WarnOnEmptyTrash -bool false
+
 # Finder: show all filename extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
@@ -44,7 +47,7 @@ sudo chflags nohidden /Volumes
 # FIXME: Modify the number of items in the Open Recent menu
 defaults write -g 'NSRecentDocumentsLimit' -int 0
 
-# 最近使ったアプリを非表示
+# メニュー内の最近使ったアプリを非表示
 defaults write com.apple.dock show-recents -bool false
 
 # スクロールバーを常時表示
