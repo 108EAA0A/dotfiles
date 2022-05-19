@@ -12,6 +12,7 @@ formulas=(
   composer
   coreutils
   curl
+  evans
   exa
   expect
   ffmpeg
@@ -36,12 +37,15 @@ formulas=(
   lazydocker
   lazygit
   libpq
+  mailhog
   mkvtoolnix
   nmap
   nkf
   pandoc
   pgcli
   php
+  protobuf
+  prototool
   rename
   shellcheck
   sl
@@ -85,6 +89,7 @@ casks=(
 
 brew update
 brew tap homebrew/cask-fonts
+brew tap ktr0731/evans
 brew tap jesseduffield/lazydocker
 
 for formula in ${formulas[@]}; do
