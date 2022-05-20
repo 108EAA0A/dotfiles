@@ -12,6 +12,7 @@ formulas=(
   composer
   coreutils
   curl
+  emojify
   evans
   exa
   expect
@@ -60,6 +61,7 @@ formulas=(
 )
 
 casks=(
+  another-redis-desktop-manager
   dbeaver-community
   docker
   dotnet-sdk
