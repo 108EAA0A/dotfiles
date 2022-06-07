@@ -48,6 +48,7 @@ $choco_packages = @(
     'paint.net',
     'powertoys',
     'procexp',
+    'r.studio',
     'shexview',
     'shellmenunew',
     'slack',
