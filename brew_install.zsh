@@ -3,7 +3,9 @@
 export HOMEBREW_NO_AUTO_UPDATE=1
 
 formulas=(
+  act
   asdf
+  awscli
   bash-completion
   bat
   binutils
@@ -35,6 +37,8 @@ formulas=(
   htop
   imagemagick
   jq
+  kubectl
+  kubectx
   lazydocker
   lazygit
   libpq
@@ -48,8 +52,10 @@ formulas=(
   protobuf
   prototool
   rename
+  rtorrent
   shellcheck
   sl
+  sops
   starship
   telnet
   tldr
@@ -62,6 +68,7 @@ formulas=(
 
 casks=(
   another-redis-desktop-manager
+  # aws-vpn-client
   dbeaver-community
   docker
   dotnet-sdk
@@ -84,6 +91,7 @@ casks=(
   slack
   sourcetree
   steam
+  # tunnelblick
   visual-studio-code
   vlc
   zoom
