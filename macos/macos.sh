@@ -50,6 +50,9 @@ defaults write -g 'NSRecentDocumentsLimit' -int 0
 # メニュー内の最近使ったアプリを非表示
 defaults write com.apple.dock show-recents -bool false
 
+# Dockに最近使ったアプリを表示
+# defaults write com.apple.dock persistent-others -array-add '{ "tile-data" = { "list-type" = 1; }; "tile-type" = "recents-tile"; }'
+
 # スクロールバーを常時表示
 defaults write -g AppleShowScrollBars -string "Always"
 
@@ -67,6 +70,9 @@ defaults write com.apple.LaunchServices LSQuarantine -bool false
 
 # スクリーンショットのファイル名を変更
 defaults write com.apple.screencapture name "SS"
+
+## テキストエディットをプレーンテキストで使う
+defaults write com.apple.TextEdit RichText -int 0
 
 # 上記設定後は、Finder と Dock を再起動
 killall Finder
