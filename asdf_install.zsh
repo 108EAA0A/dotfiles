@@ -3,6 +3,7 @@
 plugins=(
 	nodejs
 	golang
+	python
 )
 
 for plugin in ${plugins[@]}; do
