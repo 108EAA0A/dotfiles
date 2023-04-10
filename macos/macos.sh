@@ -71,8 +71,18 @@ defaults write com.apple.LaunchServices LSQuarantine -bool false
 # スクリーンショットのファイル名を変更
 defaults write com.apple.screencapture name "SS"
 
-## テキストエディットをプレーンテキストで使う
+# テキストエディットをプレーンテキストで使う
 defaults write com.apple.TextEdit RichText -int 0
+
+# ホットコーナーを全て無効化
+defaults write com.apple.dock wvous-bl-corner -int 0
+defaults write com.apple.dock wvous-bl-modifier -int 0
+defaults write com.apple.dock wvous-br-corner -int 0
+defaults write com.apple.dock wvous-br-modifier -int 0
+defaults write com.apple.dock wvous-tl-corner -int 0
+defaults write com.apple.dock wvous-tl-modifier -int 0
+defaults write com.apple.dock wvous-tr-corner -int 0
+defaults write com.apple.dock wvous-tr-modifier -int 0
 
 # 上記設定後は、Finder と Dock を再起動
 killall Finder
