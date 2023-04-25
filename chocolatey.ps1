@@ -36,6 +36,7 @@ $choco_packages = @(
     'crystaldiskinfo',
     'discord',
     'eartrumpet',
+    'epicgameslauncher',
     'firefox',
     'foobar2000',
     'gallery-dl',
