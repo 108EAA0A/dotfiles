@@ -41,6 +41,7 @@ $choco_packages = @(
     'foobar2000',
     'gallery-dl',
     'gimp',
+    'goggalaxy',
     'googlechrome',
     'handbrake',
     'honeyview',
