@@ -65,7 +65,8 @@ $choco_packages = @(
     'utorrent',
     'vlc',
     'vscode',
-    'winrar'
+    'winrar',
+    'youtube-dl'
 )
 
 $package_args = $choco_packages -join ' '
