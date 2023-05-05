@@ -37,6 +37,7 @@ $choco_packages = @(
     'discord',
     'eartrumpet',
     'epicgameslauncher',
+    'ffmpeg',
     'firefox',
     'foobar2000',
     'gallery-dl',
