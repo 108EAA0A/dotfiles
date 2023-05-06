@@ -34,6 +34,7 @@ $choco_packages = @(
     'chocolateygui',
     'cpu-z',
     'crystaldiskinfo',
+    'crystaldiskmark',
     'discord',
     'eartrumpet',
     'epicgameslauncher',
