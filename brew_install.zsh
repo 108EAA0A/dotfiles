@@ -83,6 +83,7 @@ casks=(
   kindle
   libreoffice
   firefox
+  microsoft-teams
   mkvtoolnix
   monitorcontrol
   ngrok
