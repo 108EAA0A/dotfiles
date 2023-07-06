@@ -34,6 +34,9 @@ export SAVEHIST=1000000
 export GOPATH="${HOME}/go"
 export PATH="${GOPATH}/bin:${PATH}"
 
+# ------------------------------
+# Homebrew Settings
+# ------------------------------
 case "${OSTYPE}" in
 darwin*)
   if [[ "$(/usr/bin/uname -m)" == "arm64" ]]; then
@@ -49,9 +52,6 @@ linux*)
   ;;
 esac
 
-# ------------------------------
-# Homebrew Settings
-# ------------------------------
 eval "$(${HOMEBREW_PREFIX}/bin/brew shellenv)"
 export HOMEBREW_CELLAR="${HOMEBREW_PREFIX}/Cellar"
 export HOMEBREW_REPOSITORY="${HOMEBREW_PREFIX}"

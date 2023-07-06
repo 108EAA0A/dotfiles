@@ -45,10 +45,10 @@ zplug "zplug/zplug", hook-build:'zplug --self-manage'
 
 # 未インストール項目をインストールする
 if ! zplug check --verbose; then
-    printf "Install? [y/N]: "
-    if read -q; then
-        echo; zplug install
-    fi
+  printf "Install? [y/N]: "
+  if read -q; then
+    echo; zplug install
+  fi
 fi
 
 # コマンドをリンクして、PATH に追加し、プラグインは読み込む
