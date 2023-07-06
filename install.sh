@@ -98,7 +98,7 @@ case "${OSTYPE}" in
 darwin*)
   echo "Install brew..."
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-  if [[ "$(/usr/bin/uname -m)" == "arm64" ]]; then
+  if [[ "$(uname -m)" == "arm64" ]]; then
     # On ARM macOS, this script installs to /opt/homebrew only
     HOMEBREW_PREFIX="/opt/homebrew"
   else
@@ -130,6 +130,24 @@ npm i -g typescript ts-node create-react-app jshint
 
 # echo "install vscode extensions..."
 # source "${DOT_DIR}/vscode/extensions.zsh"
+
+echo "Install cloud-sql-proxy..."
+CLOUD_SQL_PROXY_PATH="$HOME/cloud_sql_proxy"
+case "${OSTYPE}" in
+darwin*)
+  if [[ "$(uname -m)" == "arm64" ]]; then
+    # M1 macOS
+    curl -o "$CLOUD_SQL_PROXY_PATH" https://dl.google.com/cloudsql/cloud_sql_proxy.darwin.arm64
+  else
+    # Intel macOS
+    curl -o "$CLOUD_SQL_PROXY_PATH" https://dl.google.com/cloudsql/cloud_sql_proxy.darwin.amd64
+  fi
+  ;;
+linux*)
+  curl -o "$CLOUD_SQL_PROXY_PATH" https://dl.google.com/cloudsql/cloud_sql_proxy.linux.amd64
+  ;;
+esac
+chmod +x cloud_sql_proxy
 
 case "${OSTYPE}" in
 darwin*)
