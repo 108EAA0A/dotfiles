@@ -58,6 +58,8 @@ formulas=(
   sops
   starship
   telnet
+  terraform
+  terraformer
   tldr
   uniutils
   wget
