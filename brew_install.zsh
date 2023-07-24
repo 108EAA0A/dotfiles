@@ -43,6 +43,7 @@ formulas=(
   lazygit
   libpq
   mailhog
+  minio/stable/mc
   mkvtoolnix
   nmap
   nkf
