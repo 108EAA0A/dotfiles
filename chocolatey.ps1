@@ -43,6 +43,7 @@ $choco_packages = @(
     'foobar2000',
     'gallery-dl',
     'gimp',
+    'git',
     'github-desktop',
     'goggalaxy',
     'googlechrome',
