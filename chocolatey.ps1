@@ -65,6 +65,7 @@ $choco_packages = @(
     'microsoft-windows-terminal',
     'xnconvert',
     'utorrent',
+    'visualstudio-installer',
     'vlc',
     'vscode',
     'winrar',
