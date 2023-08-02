@@ -71,7 +71,8 @@ $choco_packages = @(
     'vlc',
     'vscode',
     'winrar',
-    'youtube-dl'
+    'youtube-dl',
+    'zoom'
 )
 
 $package_args = $choco_packages -join ' '
