@@ -51,7 +51,7 @@ $choco_packages = @(
     'honeyview',
     'mkvtoolnix',
     'mp3tag',
-    'nodejs',
+    'nodejs.install',
     'paint.net',
     'powertoys',
     'procexp',
@@ -71,6 +71,7 @@ $choco_packages = @(
     'vlc',
     'vscode',
     'winrar',
+    'yarn',
     'youtube-dl',
     'zoom'
 )
