@@ -49,6 +49,7 @@ $choco_packages = @(
     'googlechrome',
     'handbrake',
     'honeyview',
+    'line',
     'mkvtoolnix',
     'mp3tag',
     'nodejs.install',
