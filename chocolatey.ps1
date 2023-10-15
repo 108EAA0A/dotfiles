@@ -53,7 +53,7 @@ $choco_packages = @(
     'line',
     'mkvtoolnix',
     'mp3tag',
-    'nodejs.install',
+    'nvm.install',
     'paint.net',
     'powertoys',
     'procexp',
