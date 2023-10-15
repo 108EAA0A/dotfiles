@@ -31,6 +31,7 @@ $choco_packages = @(
     '7zip',
     'adobereader',
     'audacity',
+    'awscli',
     'chocolateygui',
     'cpu-z',
     'crystaldiskinfo',
