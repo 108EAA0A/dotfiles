@@ -59,6 +59,9 @@ defaults write -g AppleShowScrollBars -string "Always"
 # スペルの訂正を無効化
 defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
 
+# ライブ変換を無効化
+defaults write com.apple.inputmethod.Kotoeri JIMPrefLiveConversionKey -bool false
+
 # クラッシュレポートを無効化
 defaults write com.apple.CrashReporter DialogType -string "none"
 
