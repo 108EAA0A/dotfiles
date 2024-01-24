@@ -125,11 +125,14 @@ source "${DOT_DIR}/asdf_install.zsh"
 echo "Loading dotfiles..."
 source "${DOT_DIR}/.zshrc"
 
-echo "install node modules..."
+echo "Install node modules..."
 npm i -g typescript ts-node create-react-app jshint
 
 # echo "install vscode extensions..."
 # source "${DOT_DIR}/vscode/extensions.zsh"
+
+echo "Install rye..."
+curl -sSf https://rye-up.com/get | bash
 
 echo "Install cloud-sql-proxy..."
 CLOUD_SQL_PROXY_PATH="$HOME/cloud_sql_proxy"
