@@ -27,6 +27,7 @@ formulas=(
   gibo
   git-extras
   git-flow
+  git-lfs
   git-secrets
   gh
   golangci-lint
