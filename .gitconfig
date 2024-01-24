@@ -64,3 +64,5 @@
 
 [github]
 	user = 108EAA0A
+[init]
+	defaultBranch = main

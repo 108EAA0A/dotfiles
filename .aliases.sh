@@ -9,7 +9,6 @@ alias top='htop'
 
 alias ls='exa'
 alias ll='exa -ahl --git --color=always --icons'
-
 alias tree='ll -T --git-ignore -I ".git"'
 
 alias awsp='export AWS_PROFILE=$(grep "^\[.*\]" ~/.aws/credentials | tr -d "[" | tr -d "]" | fzf --reverse)'
