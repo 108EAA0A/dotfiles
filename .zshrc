@@ -33,9 +33,9 @@ if type brew &>/dev/null; then
 fi
 
 # ------------------------------
-# Load zplug
+# Load sheldon
 # ------------------------------
-source ${HOME}/.zplug.zsh
+eval "$(sheldon source)"
 
 # ------------------------------
 # Load functions

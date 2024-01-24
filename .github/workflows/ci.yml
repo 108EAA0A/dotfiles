@@ -21,7 +21,6 @@ jobs:
           shellcheck ./macos/macos.sh
           shellcheck -e SC1071 ./vscode/extensions.zsh
           shellcheck -e SC1071 ./.functions.zsh
-          shellcheck -e SC1071 ./.zplug.zsh
           shellcheck -e SC1071 ./.zshenv
           shellcheck -e SC1071 ./.zshrc
           shellcheck -e SC1071 ./asdf_install.zsh

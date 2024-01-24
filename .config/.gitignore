@@ -1,0 +1,17 @@
+# Ignore All
+*
+!*/
+
+# Allowlist
+!.gitignore
+!*rc
+!config
+!config.*
+!plugins.*
+
+# Denylist
+gcloud
+stripe
+*.db
+history
+log

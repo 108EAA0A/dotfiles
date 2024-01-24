@@ -64,6 +64,3 @@
 
 [github]
 	user = 108EAA0A
-[url "github:"]
-	InsteadOf = https://github.com/
-	InsteadOf = git@github.com:

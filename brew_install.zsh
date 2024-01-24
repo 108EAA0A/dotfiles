@@ -55,6 +55,7 @@ formulas=(
   prototool
   rename
   rtorrent
+  sheldon
   shellcheck
   sl
   sops
