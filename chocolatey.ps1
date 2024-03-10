@@ -33,6 +33,7 @@ $choco_packages = @(
     'audacity',
     'awscli',
     'chocolateygui',
+    'cmake.install',
     'cpu-z',
     'crystaldiskinfo',
     'crystaldiskmark',
