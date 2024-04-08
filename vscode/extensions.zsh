@@ -125,6 +125,7 @@ extensions=(
   yzhang.markdown-all-in-one
   zgm.cuesheet
   zh9528.file-size
+  zhuangtongfa.material-theme
   Zignd.html-css-class-completion
 )
 
