@@ -73,6 +73,7 @@ $choco_packages = @(
     'vlc',
     'vscode',
     'winrar',
+    'wireshark',
     'yarn',
     'youtube-dl',
     'zoom'
