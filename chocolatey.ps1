@@ -36,6 +36,7 @@ $choco_packages = @(
     'cpu-z',
     'crystaldiskinfo',
     'crystaldiskmark',
+    'cubepdfutility',
     'discord',
     'eartrumpet',
     'epicgameslauncher',
