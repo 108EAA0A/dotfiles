@@ -86,4 +86,4 @@ $package_args = $choco_packages -join ' '
 cinst -y $package_args
 
 # add cmake path
-cinst -y cmake --installargs '"ADD_CMAKE_TO_PATH=System"'
+cinst -y cmake --installargs 'ADD_CMAKE_TO_PATH=System' --apply-install-arguments-to-dependencies
