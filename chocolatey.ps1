@@ -36,6 +36,7 @@ $choco_packages = @(
     'cpu-z',
     'crystaldiskinfo',
     'crystaldiskmark',
+    'cubepdfutility',
     'discord',
     'eartrumpet',
     'epicgameslauncher',
@@ -73,6 +74,9 @@ $choco_packages = @(
     'vlc',
     'vscode',
     'winrar',
+    'wireshark',
+    'wiztree',
+    'xnview',
     'yarn',
     'youtube-dl',
     'zoom'
@@ -82,4 +86,4 @@ $package_args = $choco_packages -join ' '
 cinst -y $package_args
 
 # add cmake path
-cinst -y cmake --installargs '"ADD_CMAKE_TO_PATH=System"'
+cinst -y cmake --installargs 'ADD_CMAKE_TO_PATH=System' --apply-install-arguments-to-dependencies
