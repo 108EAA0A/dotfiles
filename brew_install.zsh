@@ -68,6 +68,7 @@ formulas=(
   terraformer
   tldr
   uniutils
+  vercel-cli
   wget
   yarn
   youtube-dl
