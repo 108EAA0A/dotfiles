@@ -61,5 +61,6 @@ export INFOPATH="${HOMEBREW_PREFIX}/share/info:${INFOPATH:-}"
 
 export PATH="$(brew --prefix binutils)/bin:${PATH}"
 export PATH="$(brew --prefix coreutils)/libexec/gnubin:${PATH}"
+export PATH="$(brew --prefix java11)/bin:${PATH}"
 export PATH="$(brew --prefix libpq)/bin:${PATH}"
 source "$HOME/.rye/env"

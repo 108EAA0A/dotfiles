@@ -19,6 +19,7 @@ formulas=(
   exa
   expect
   ffmpeg
+  firebase-cli
   font-hackgen-nerd
   fzf
   gallery-dl
@@ -37,6 +38,8 @@ formulas=(
   hacker1024/hacker1024/coretemp
   htop
   imagemagick
+  iproute2mac
+  java11
   jq
   kubectl
   kubectx
