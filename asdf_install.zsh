@@ -4,6 +4,7 @@ plugins=(
 	nodejs
 	golang
 	python
+	terraform
 )
 
 for plugin in ${plugins[@]}; do
