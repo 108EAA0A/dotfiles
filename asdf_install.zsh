@@ -1,8 +1,9 @@
 #!/bin/zsh -eux
 
 plugins=(
-	nodejs
 	golang
+	nodejs
+	pnpm
 	python
 	terraform
 )
