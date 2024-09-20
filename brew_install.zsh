@@ -78,6 +78,7 @@ casks=(
   another-redis-desktop-manager
   # aws-vpn-client
   dbeaver-community
+  discord
   docker
   dotnet-sdk
   font-ricty-diminished
