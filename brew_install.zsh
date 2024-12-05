@@ -77,6 +77,7 @@ formulas=(
 casks=(
   another-redis-desktop-manager
   # aws-vpn-client
+  background-music
   dbeaver-community
   discord
   docker
