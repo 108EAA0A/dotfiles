@@ -67,6 +67,7 @@ $choco_packages = @(
     'sourcetree',
     'steam-client',
     'teamviewer',
+    'telegram',
     'microsoft-windows-terminal',
     'xnconvert',
     'utorrent',
