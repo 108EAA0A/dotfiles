@@ -2,10 +2,18 @@
 
 export HOMEBREW_NO_AUTO_UPDATE=1
 
+taps=(
+  homebrew/cask-fonts
+  ktr0731/evans
+  jesseduffield/lazydocker
+  aws/tap
+)
+
 formulas=(
   act
   asdf
   awscli
+  aws-sam-cli
   bash-completion
   bat
   binutils
@@ -109,9 +117,10 @@ casks=(
 )
 
 brew update
-brew tap homebrew/cask-fonts
-brew tap ktr0731/evans
-brew tap jesseduffield/lazydocker
+
+for tap in ${taps[@]}; do
+  brew tap ${tap}
+done
 
 for formula in ${formulas[@]}; do
   brew install ${formula}
