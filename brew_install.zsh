@@ -57,6 +57,7 @@ formulas=(
   mailhog
   minio/stable/mc
   mkvtoolnix
+  ncdu
   nmap
   nkf
   pandoc
