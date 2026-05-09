@@ -74,6 +74,7 @@ $choco_packages = @(
     'visualstudio-installer',
     'vlc',
     'vscode',
+    'wincdemu',
     'winrar',
     'wireshark',
     'wiztree',
