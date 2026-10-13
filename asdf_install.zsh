@@ -13,3 +13,7 @@ for plugin in ${plugins[@]}; do
 	asdf install ${plugin} latest
 	asdf global ${plugin} latest
 done
+
+asdf plugin add terragrunt https://github.com/gruntwork-io/asdf-terragrunt
+asdf install terragrunt latest
+asdf global terragrunt latest
