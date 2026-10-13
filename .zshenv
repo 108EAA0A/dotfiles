@@ -25,8 +25,8 @@ export XDG_DATA_HOME="${HOME}/.local/share"
 # History Settings
 # ------------------------------
 export HISTFILE="${HOME}/.zsh-history"
-export HISTSIZE=1000000
-export SAVEHIST=1000000
+export HISTSIZE=100000 # メモリ上の履歴リストに保存されるイベントの最大数
+export SAVEHIST=100000 # 履歴ファイルに保存されるイベントの最大数
 
 # ------------------------------
 # golang Settings

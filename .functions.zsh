@@ -88,6 +88,13 @@ fzf_npm_scripts() {
 zle -N fzf_npm_scripts
 bindkey "^Xn" fzf_npm_scripts
 
+function fzf_history() {
+	BUFFER=$(history -n -r 1 | fzf --exact --reverse --query="$LBUFFER" --prompt="History > ")
+	CURSOR=${#BUFFER}
+}
+# zle -N fzf_history       # ZLEのウィジェットとして関数を登録
+# bindkey '^r' fzf_history # `Ctrl+r` で登録したfzf_historyウィジェットを呼び出す
+
 wttr() {
 	local location="${1// /+}"
 	shift 2>/dev/null

@@ -27,6 +27,9 @@ github = "zsh-users/zsh-autosuggestions"
 [plugins.zsh-completions]
 github = "zsh-users/zsh-completions"
 
+[plugins.zsh-kubectl-completion]
+github = "nnao45/zsh-kubectl-completion"
+
 [plugins.zsh-syntax-highlighting]
 github = "zsh-users/zsh-syntax-highlighting"
 apply = ["defer"]
