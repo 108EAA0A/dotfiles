@@ -67,14 +67,17 @@ formulas=(
   prototool
   rename
   rtorrent
+  sevenzip
   sheldon
   shellcheck
   sl
   sops
   starship
   telnet
+  terminal-notifier
   terraform
   terraformer
+  tflint
   tldr
   uniutils
   wget
@@ -85,16 +88,19 @@ formulas=(
 
 casks=(
   another-redis-desktop-manager
-  # aws-vpn-client
+  aws-vpn-client
   background-music
+  claude-code
   dbeaver-community
   discord
+  disk-inventory-x
   docker
   dotnet-sdk
   font-ricty-diminished
   github
   google-chrome
   google-cloud-sdk
+  google-drive
   graphiql
   iterm2
   jetbrains-toolbox
@@ -102,10 +108,13 @@ casks=(
   kindle
   libreoffice
   firefox
+  microsoft-office
   microsoft-teams
   mkvtoolnix
   monitorcontrol
   ngrok
+  nosql-workbench
+  notion
   parallels
   postman
   slack
