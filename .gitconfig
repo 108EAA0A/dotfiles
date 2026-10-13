@@ -15,8 +15,10 @@
 	template = ~/.stCommitMsg
 [rebase]
 	autosquash = true
+	autostash = true
 [push]
 	default = current
+	followTags = true
 [rerere]
 	enabled = true
 
@@ -27,6 +29,7 @@
 	st = status
 	amend = commit --amend
 	fixup = commit --fixup
+	pushf = push --force-with-lease --force-if-includes
 	info = remote show origin
 	# ブランチ移動せずに指定したブランチを最新にする
 	update = "!f () { if [ -z '$(git diff HEAD..$1)' ]; then git pull origin; else git branch -D $1 && git fetch origin $1:$1 && git branch -u origin/$1 $1; fi; }; f"
@@ -67,3 +70,9 @@
 	user = 108EAA0A
 [init]
 	defaultBranch = main
+[credential "https://github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
