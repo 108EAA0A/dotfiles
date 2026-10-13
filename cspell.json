@@ -1,0 +1,8 @@
+{
+  "version": "0.2",
+  "ignorePaths": [
+    "brew_install.zsh",
+    "chocolatey.ps1",
+    "vscode/*"
+  ]
+}
