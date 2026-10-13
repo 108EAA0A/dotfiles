@@ -89,6 +89,8 @@ darwin*)
   ln -snfv "${DOT_DIR}/macos/macos.sh" "${HOME}/.system.enviroment"
   mkdir -p "${HOME}/Library/LaunchAgents"
   ln -snfv "${DOT_DIR}/macos/system.environment.plist" "${HOME}/Library/LaunchAgents/system.environment.plist"
+  mkdir -p "${HOME}/Library/Application Support/Code/User"
+  ln -snfv "${DOT_DIR}/vscode/settings.json" "${HOME}/Library/Application Support/Code/User/settings.json"
   ;;
 esac
 

@@ -1,0 +1,423 @@
+{
+    "editor.fontFamily": "HackGenNerd Console",
+    "editor.mouseWheelZoom": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.renderControlCharacters": true,
+    "editor.renderWhitespace": "all",
+    "editor.suggestSelection": "first",
+    "files.autoGuessEncoding": true,
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "window.menuBarVisibility": "default",
+    "workbench.statusBar.visible": true,
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.editor.decorations.badges": true,
+    "workbench.editor.wrapTabs": true,
+    "team.showFarewellMessage": false,
+    "team.showWelcomeMessage": false,
+    "terminal.integrated.fontFamily": "HackGenNerd, Ricty Diminished Discord, monospace",
+    "terminal.integrated.inheritEnv": false,
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "python.languageServer": "Default",
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true,
+    "python.pythonPath": "C:\\Anaconda2\\envs\\py38\\python.exe",
+    "cmake.configureOnOpen": false,
+    "cmake.environment": {
+        // asdfで入れたgoなどをvscodeが使えるようにする
+        "PATH": "${env:PATH}"
+    },
+    "C_Cpp.updateChannel": "Insiders",
+    "java.semanticHighlighting.enabled": true,
+    "tabnine.experimentalAutoImports": true,
+    "[html]": {
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true,
+    },
+    "[css]": {
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true,
+    },
+    "[javascript]": {
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+    },
+    "[typescript]": {
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+    },
+    "[python]": {
+        "editor.tabSize": 4,
+        "editor.insertSpaces": true,
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[tex]": {
+        // スニペット補完中にも補完を使えるようにする
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
+        "editor.tabSize": 2
+    },
+    "[latex]": {
+        // スニペット補完中にも補完を使えるようにする
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
+        "editor.tabSize": 2
+    },
+    // 使用パッケージのコマンドや環境の補完を有効にする
+    "latex-workshop.intellisense.package.enabled": true,
+    // 生成ファイルを "out" ディレクトリに吐き出す
+    "latex-workshop.latex.outDir": "tmpTeX",
+    "latex-workshop.latex.autoClean.run": "onFailed",
+    "latex-workshop.view.pdf.viewer": "tab",
+    // ビルドのレシピ
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "latexmk",
+            "tools": [
+                "latexmk"
+            ]
+        },
+        {
+            "name": "ptex2pdf",
+            "tools": [
+                "ptex2pdf"
+            ]
+        },
+    ],
+    // ビルドのレシピに使われるパーツ
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "-outdir=%OUTDIR%",
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "lualatexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-lualatex",
+                "-outdir=%OUTDIR%",
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "latexmk_rconly",
+            "command": "latexmk",
+            "args": [
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%DOCFILE%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "rnw2tex",
+            "command": "Rscript",
+            "args": [
+                "-e",
+                "knitr::opts_knit$set(concordance = TRUE); knitr::knit('%DOCFILE_EXT%')"
+            ],
+            "env": {}
+        },
+        {
+            "name": "jnw2tex",
+            "command": "julia",
+            "args": [
+                "-e",
+                "using Weave; weave(\"%DOC_EXT%\", doctype=\"tex\")"
+            ],
+            "env": {}
+        },
+        {
+            "name": "jnw2texmintex",
+            "command": "julia",
+            "args": [
+                "-e",
+                "using Weave; weave(\"%DOC_EXT%\", doctype=\"texminted\")"
+            ],
+            "env": {}
+        },
+        {
+            "name": "ptex2pdf",
+            "command": "ptex2pdf",
+            "args": [
+                "-u",
+                "-l",
+                "-ot",
+                "-kanji=utf8 -synctex=1 -interaction=nonstopmode -file-line-error",
+                "%DOC%"
+            ],
+        }
+    ],
+    "markdown-preview-enhanced.latexEngine": "uplatex",
+    "editor.inlineHints.fontFamily": "'Ricty Diminished Discord', Consolas, 'Courier New', monospace",
+    "GitLive.Issue tracker integration": "Disabled",
+    "atomKeymap.promptV3Features": true,
+    "editor.bracketPairColorization.enabled": true,
+    "redhat.telemetry.enabled": false,
+    "mssql.connections": [
+        {
+            "server": "{{put-server-name-here}}",
+            "database": "{{put-database-name-here}}",
+            "user": "{{put-username-here}}",
+            "password": "{{put-password-here}}"
+        }
+    ],
+    "settingsSync.ignoredExtensions": [
+        "vscjava.vscode-java-pack"
+    ],
+    "git.autofetch": true,
+    "shellcheck.exclude": [
+        "SC1071",
+        "SC1091",
+        "SC3010",
+        "SC3020",
+        "SC3028",
+        "SC3046"
+    ],
+    "terminal.integrated.scrollback": 10000,
+    "go.toolsManagement.autoUpdate": true,
+    "diffEditor.renderSideBySide": false,
+    "terminal.integrated.env.osx": {
+        "FIG_NEW_SESSION": "1"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "githubPullRequests.pullBranch": "never",
+    "typescript.tsdk": "./node_modules/typescript/lib",
+    "GitLive.Special branches": "main|master|trunk|dev|develop|qa|test|release[-/].*",
+    "npm.keybindingsChangedWarningShown": true,
+    "workbench.colorTheme": "One Dark Pro Darker",
+    "terraform.codelens.referenceCount": true,
+    "editor.guides.bracketPairs": "active",
+    "cSpell.userWords": [
+        "datetime",
+    ],
+    "editor.unicodeHighlight.nonBasicASCII": false,
+    "database-client.autoSync": true,
+    "svg.preview.mode": "svg",
+    "hediet.vscode-drawio.resizeImages": null,
+    "aws.telemetry": false,
+    "gitlens.views.scm.grouped.views": {
+        "commits": true,
+        "branches": true,
+        "remotes": true,
+        "stashes": true,
+        "tags": true,
+        "worktrees": true,
+        "contributors": true,
+        "repositories": false,
+        "searchAndCompare": false,
+        "launchpad": true
+    },
+    "testing.coverageToolbarEnabled": true,
+    "docker.extension.enableComposeLanguageServer": false,
+    "[dockercompose]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.autoIndent": "advanced",
+        "editor.quickSuggestions": {
+            "other": true,
+            "comments": false,
+            "strings": true
+        },
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "[github-actions-workflow]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "chat.viewSessions.orientation": "stacked",
+    "git.confirmSync": false,
+    "git.ignoreMissingGitWarning": true,
+    "git.replaceTagsWhenPull": true,
+    "yaml.disableSchemaDetection": [
+        "**/.github/workflows/*.yml",
+        "**/.github/workflows/*.yaml",
+        "**/.gitea/workflows/*.yml",
+        "**/.gitea/workflows/*.yaml",
+        "**/.forgejo/workflows/*.yml",
+        "**/.forgejo/workflows/*.yaml"
+    ],
+    "workbench.browser.searchEngine": "google",
+    "chat.tools.terminal.autoApprove": {
+        "cd": true,
+        "echo": true,
+        "ls": true,
+        "dir": true,
+        "pwd": true,
+        "cat": true,
+        "head": true,
+        "tail": true,
+        "findstr": true,
+        "wc": true,
+        "tr": true,
+        "cut": true,
+        "cmp": true,
+        "which": true,
+        "basename": true,
+        "dirname": true,
+        "realpath": true,
+        "readlink": true,
+        "stat": true,
+        "file": true,
+        "od": true,
+        "du": true,
+        "df": true,
+        "sleep": true,
+        "nl": true,
+        "grep": true,
+        "/^git(\\s+(-C\\s+\\S+|--no-pager))*\\s+status\\b/": true,
+        "/^git(\\s+(-C\\s+\\S+|--no-pager))*\\s+log\\b/": true,
+        "/^git(\\s+(-C\\s+\\S+|--no-pager))*\\s+log\\b.*\\s--output(=|\\s|$)/": false,
+        "/^git(\\s+(-C\\s+\\S+|--no-pager))*\\s+show\\b/": true,
+        "/^git(\\s+(-C\\s+\\S+|--no-pager))*\\s+show\\b.*\\s--output(=|\\s|$)/": false,
+        "/^git(\\s+(-C\\s+\\S+|--no-pager))*\\s+diff\\b/": true,
+        "/^git(\\s+(-C\\s+\\S+|--no-pager))*\\s+ls-files\\b/": true,
+        "/^git(\\s+(-C\\s+\\S+|--no-pager))*\\s+grep\\b/": true,
+        "/^git(\\s+(-C\\s+\\S+|--no-pager))*\\s+branch\\b/": true,
+        "/^git(\\s+(-C\\s+\\S+|--no-pager))*\\s+branch\\b.*\\s-(d|D|m|M|-delete|-force)\\b/": false,
+        "/^docker\\s+(ps|images|info|version|inspect|logs|top|stats|port|diff|search|events)\\b/": true,
+        "/^docker\\s+(container|image|network|volume|context|system)\\s+(ls|ps|inspect|history|show|df|info)\\b/": true,
+        "/^docker\\s+compose\\s+(ps|ls|top|logs|images|config|version|port|events)\\b/": true,
+        "Get-ChildItem": true,
+        "Get-Content": true,
+        "Get-Date": true,
+        "Get-Random": true,
+        "Get-Location": true,
+        "Set-Location": true,
+        "Write-Host": true,
+        "Write-Output": true,
+        "Out-String": true,
+        "Split-Path": true,
+        "Join-Path": true,
+        "Start-Sleep": true,
+        "Where-Object": true,
+        "Select-Object": true,
+        "Select-String": true,
+        "Measure-Object": true,
+        "Compare-Object": true,
+        "Format-List": true,
+        "Format-Table": true,
+        "Sort-Object": true,
+        "/^npm\\s+(ls|list|outdated|view|info|show|explain|why|root|prefix|bin|search|doctor|fund|repo|bugs|docs|home|help(-search)?)\\b/": true,
+        "/^npm\\s+config\\s+(list|get)\\b/": true,
+        "/^npm\\s+pkg\\s+get\\b/": true,
+        "/^npm\\s+audit$/": true,
+        "/^npm\\s+cache\\s+verify\\b/": true,
+        "/^yarn\\s+(list|outdated|info|why|bin|help|versions)\\b/": true,
+        "/^yarn\\s+licenses\\b/": true,
+        "/^yarn\\s+audit\\b(?!.*\\bfix\\b)/": true,
+        "/^yarn\\s+config\\s+(list|get)\\b/": true,
+        "/^yarn\\s+cache\\s+dir\\b/": true,
+        "/^pnpm\\s+(ls|list|outdated|why|root|bin|doctor)\\b/": true,
+        "/^pnpm\\s+licenses\\b/": true,
+        "/^pnpm\\s+audit\\b(?!.*\\bfix\\b)/": true,
+        "/^pnpm\\s+config\\s+(list|get)\\b/": true,
+        "npm ci": true,
+        "/^yarn\\s+install\\s+--frozen-lockfile\\b/": true,
+        "/^pnpm\\s+install\\s+--frozen-lockfile\\b/": true,
+        "column": true,
+        "/^column\\b.*\\s-c\\s+[0-9]{4,}/": false,
+        "date": true,
+        "/^date\\b.*\\s(-s|--set)\\b/": false,
+        "find": true,
+        "/^find\\b.*\\s-(delete|exec|execdir|fprint|fprintf|fls|ok|okdir)\\b/": false,
+        "rg": true,
+        "/^rg\\b.*\\s(--pre|--hostname-bin)\\b/": false,
+        "sed": true,
+        "/^sed\\b.*\\s(-[a-zA-Z]*(e|f)[a-zA-Z]*|--expression|--file)\\b/": false,
+        "/^sed\\b.*s\\/.*\\/.*\\/[ew]/": false,
+        "/^sed\\b(?:\\s+(?:(?:-l|--line-length)\\s+\\S+|--line-length=\\S+|-\\S+))*\\s+(['\"])\\s*(?:(?:\\d+|\\$|\\/(?:\\\\.|[^\\/])*\\/)(?:\\s*,\\s*(?:\\d+|\\$|\\/(?:\\\\.|[^\\/])*\\/))?)?\\s*!?\\s*[erRwW](?:\\s|\\1)/": false,
+        "/^sed\\b(?:\\s+(?:(?:-l|--line-length)\\s+\\S+|--line-length=\\S+|-\\S+))*\\s+(['\"])(?:\\\\.|(?!\\1).)*[;{]\\s*(?:(?:\\d+|\\$|\\/(?:\\\\.|[^\\/])*\\/)(?:\\s*,\\s*(?:\\d+|\\$|\\/(?:\\\\.|[^\\/])*\\/))?)?\\s*!?\\s*[erRwW](?:\\s|\\1|[;}])/": false,
+        "/^sed\\b(?:\\s+(?:(?:-l|--line-length)\\s+\\S+|--line-length=\\S+|-\\S+))*\\s+(?:(?:\\d+|\\$|\\/(?:\\\\.|[^\\/])*\\/)(?:\\s*,\\s*(?:\\d+|\\$|\\/(?:\\\\.|[^\\/])*\\/))?)?\\s*!?\\s*[erRwW](?:\\s|$)/": false,
+        "/^sort\\b(?!-)/": true,
+        "/^sort\\b.*\\s-(o|S)\\b/": false,
+        "/^sort\\b.*\\s(?:\\$?['\"]|\\\\)*-(?:\\$?['\"]|\\\\)*-(?:\\$?['\"]|\\\\)*c(?:\\$?['\"]|\\\\)*o/": false,
+        "tree": true,
+        "/^tree\\b.*\\s-o\\b/": false,
+        "/^xxd$/": true,
+        "/^xxd\\b(\\s+-\\S+)*\\s+[^-\\s]\\S*$/": true,
+        "rm": false,
+        "rmdir": false,
+        "del": false,
+        "Remove-Item": false,
+        "ri": false,
+        "rd": false,
+        "erase": false,
+        "dd": false,
+        "kill": false,
+        "ps": false,
+        "top": false,
+        "Stop-Process": false,
+        "spps": false,
+        "taskkill": false,
+        "taskkill.exe": false,
+        "curl": false,
+        "wget": false,
+        "Invoke-RestMethod": false,
+        "Invoke-WebRequest": false,
+        "irm": false,
+        "iwr": false,
+        "chmod": false,
+        "chown": false,
+        "Set-ItemProperty": false,
+        "sp": false,
+        "Set-Acl": false,
+        "jq": false,
+        "xargs": false,
+        "eval": false,
+        "Invoke-Expression": false,
+        "iex": false
+    },
+    "claudeCode.hideOnboarding": true,
+    "js/ts.referencesCodeLens.enabled": true,
+    "js/ts.implementationsCodeLens.enabled": true,
+    "files.watcherExclude": {
+        "**/*.map": true,
+        "**/dist/**": true,
+        "**/node_modules/**": true
+    },
+    "search.exclude": {
+        "**/*.map": true,
+        "**/dist": true
+    },
+}

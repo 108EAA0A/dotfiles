@@ -1,27 +1,34 @@
 #!/bin/zsh -eux
 
 extensions=(
-  abusaidm.html-snippets
   alefragnani.rtf
+  amazonwebservices.aws-toolkit-vscode
+  andrewbutson.github-copilot-llm-gateway
+  anthropic.claude-code
   apollographql.vscode-apollo
-  austin.code-gnu-global
-  bajdzis.vscode-database
+  arjun.swagger-viewer
+  attilabuti.vscode-mjml
   bdavs.expect
   Biscrat.kagex-vscode
   Biscrat.tjs-vscode
   bradgashler.htmltagwrap
   bradymholt.pgformatter
-  bungcip.better-toml
   burkeholland.simple-react-snippets
+  chaliy.handlebars-preview
+  charliermarsh.ruff
   christian-kohler.npm-intellisense
   christian-kohler.path-intellisense
   chrmarti.regex
-  ckolkman.vscode-postgres
+  cweijan.dbclient-jdbc
+  cweijan.vscode-mysql-client2
   DavidAnson.vscode-markdownlint
-  dbaeumer.jshint
   dbaeumer.vscode-eslint
+  dgeibi.alias-tool
+  digitalbrainstem.javascript-ejs-support
+  docker.docker
   donjayamanne.githistory
   DotJoshJohnson.xml
+  drblury.protobuf-vsc
   dsznajder.es7-react-js-snippets
   eamodio.gitlens
   ecmel.vscode-html-css
@@ -29,99 +36,125 @@ extensions=(
   eg2.vscode-npm-script
   esbenp.prettier-vscode
   fabiospampinato.vscode-diff
-  felixfbecker.php-debug
-  felixfbecker.php-intellisense
-  felixfbecker.php-pack
+  fabiospampinato.vscode-open-in-github
+  figma.figma-vscode-extension
   firefox-devtools.vscode-firefox-debug
   formulahendry.auto-close-tag
   formulahendry.auto-rename-tag
   formulahendry.docker-explorer
   foxundermoon.shell-format
+  github.github-vscode-theme
+  github.vscode-github-actions
   GitHub.vscode-pull-request-github
   goessner.mdmath
   golang.go
   GrapeCity.gc-excelviewer
-  hdg.live-html-previewer
+  graphql.vscode-graphql
+  graphql.vscode-graphql-syntax
+  gruntfuggly.todo-tree
+  hashicorp.hcl
+  hashicorp.terraform
   hediet.vscode-drawio
   hnw.vscode-auto-open-markdown-preview
-  HookyQR.beautify
+  htmlhint.vscode-htmlhint
   IBM.output-colorizer
+  idleberg.nsis
+  idleberg.openvpn
+  imgildev.vscode-drizzle-snippets
+  ionutvmi.path-autocomplete
   jakob101.RelativePath
   James-Yu.latex-workshop
   jasonnutter.search-node-modules
   jebbs.plantuml
   joaompinto.vscode-graphviz
+  jock.svg
   kisstkondoros.vscode-codemetrics
-  leizongmin.node-module-intellisense
   lihui.vs-color-picker
+  luveti.kconfig
   marp-team.marp-vscode
+  matangover.mypy
   mechatroner.rainbow-csv
   mhutchie.git-graph
   Mikael.Angular-BeastCode
-  mkaufman.HTMLHint
+  misterj.vue-volar-extention-pack
   mrmlnc.vscode-apache
-  ms-azuretools.vscode-azurefunctions
-  ms-azuretools.vscode-azureresourcegroups
+  ms-azuretools.vscode-containers
   ms-azuretools.vscode-docker
   MS-CEINTL.vscode-language-pack-ja
+  ms-copilotstudio.vscode-copilotstudio
   ms-dotnettools.csharp
+  ms-dotnettools.vscode-dotnet-runtime
   ms-kubernetes-tools.vscode-kubernetes-tools
-  ms-mssql.mssql
-  ms-python.anaconda-extension-pack
+  ms-playwright.playwright
+  ms-python.debugpy
+  ms-python.isort
   ms-python.python
   ms-python.vscode-pylance
+  ms-python.vscode-python-envs
   ms-toolsai.jupyter
   ms-toolsai.jupyter-renderers
+  ms-toolsai.vscode-jupyter-cell-tags
+  ms-toolsai.vscode-jupyter-slideshow
   ms-vscode-remote.remote-containers
   ms-vscode-remote.remote-ssh
   ms-vscode-remote.remote-ssh-edit
   ms-vscode-remote.remote-wsl
   ms-vscode-remote.vscode-remote-extensionpack
-  ms-vscode.azure-account
   ms-vscode.cmake-tools
+  ms-vscode.cpp-devtools
   ms-vscode.cpptools
+  ms-vscode.hexeditor
+  ms-vscode.live-server
   ms-vscode.powershell
-  ms-vscode.vscode-typescript-tslint-plugin
+  ms-vscode.remote-explorer
+  ms-vscode.remote-server
+  ms-vscode.vscode-js-profile-flame
+  ms-vscode.vscode-serial-monitor
+  ms-vscode.vscode-typescript-next
   ms-vsliveshare.vsliveshare
-  ms-vsliveshare.vsliveshare-audio
-  ms-vsts.team
-  msjsdiag.debugger-for-chrome
   mtxr.sqltools
   mutantdino.resourcemonitor
   mxschmitt.postscript
   naumovs.color-highlight
+  njpwerner.autodocstring
   nodesource.vscode-for-node-js-development-pack
-  NuclleaR.vscode-extension-auto-import
+  octref.vetur
   oderwat.indent-rainbow
   pflannery.vscode-versionlens
-  pmneo.tsimporter
-  redhat.java
+  randomfractalsinc.vscode-data-preview
   redhat.vscode-commons
   redhat.vscode-yaml
+  remcohaszing.schemastore
   RomanPeshkov.vscode-text-tables
-  rust-lang.rust
+  rphlmr.vscode-drizzle-orm
+  rust-lang.rust-analyzer
+  ryanluker.vscode-coverage-gutters
   saikou9901.evilinspector
-  Shan.code-settings-sync
+  saoudrizwan.claude-dev
   shardulm94.trailing-spaces
+  sibiraj-s.vscode-scss-formatter
   slevesque.vscode-zipexplorer
-  steoates.autoimport
-  TabNine.tabnine-vscode
+  streetsidesoftware.code-spell-checker
+  stylelint.vscode-stylelint
+  syler.sass-indented
+  tamasfe.even-better-toml
   TeamHub.teamhub
+  timonwong.shellcheck
+  toba.vsfire
   Tobiah.language-pde
   twxs.cmake
+  tylerharris.terraform-link-docs
   uctakeoff.vscode-counter
-  VisualStudioExptTeam.vscodeintellicode
+  usernamehw.errorlens
   vsciot-vscode.vscode-arduino
-  vscjava.vscode-java-debug
-  vscjava.vscode-java-dependency
-  vscjava.vscode-java-pack
-  vscjava.vscode-java-test
-  vscjava.vscode-maven
-  waderyan.nodejs-extension-pack
+  vue.volar
   WallabyJs.quokka-vscode
   wix.vscode-import-cost
   wraith13.wandbox-vscode
   xabikos.JavaScriptSnippets
+  xdebug.php-debug
+  xdebug.php-pack
+  yoavbls.pretty-ts-errors
   yzhang.markdown-all-in-one
   zgm.cuesheet
   zh9528.file-size
