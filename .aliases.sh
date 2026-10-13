@@ -7,6 +7,13 @@ alias cat='bat'
 alias date='gdate'
 alias top='htop'
 
+case "${OSTYPE}" in
+linux*)
+  alias ip='ip --color'
+  alias ipb='ip --brief'
+  ;;
+esac
+
 alias ls='exa'
 alias ll='exa -ahl --git --color=always --icons'
 alias tree='ll -T --git-ignore -I ".git"'
