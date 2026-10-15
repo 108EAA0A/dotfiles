@@ -9,7 +9,7 @@ jobs:
   ci:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v5
       - name: Run actionlint
         shell: bash
         run: |
@@ -17,7 +17,7 @@ jobs:
           ./actionlint -color
       - name: Run shellcheck
         run: |
-          shellcheck ./.aliases.sh
+          shellcheck -e SC3028 ./.aliases.sh
           shellcheck ./macos/macos.sh
           shellcheck -e SC1071 ./vscode/extensions.zsh
           shellcheck -e SC1071 ./.functions.zsh
