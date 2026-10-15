@@ -84,8 +84,12 @@ ln -snfv "${DOT_DIR}/.ssh/config" "${HOME}/.ssh/config"
 ln -snfv "${DOT_DIR}/.config" "${HOME}/.config"
 mkdir -p "${HOME}/.quokka"
 ln -snfv "${DOT_DIR}/.quokka/config.json" "${HOME}/.quokka/config.json"
+mkdir -p "${HOME}/.claude"
+ln -snfv "${DOT_DIR}/.claude/CLAUDE.md" "${HOME}/.claude/CLAUDE.md"
 case "${OSTYPE}" in
 darwin*)
+  ln -snfv "${DOT_DIR}/.claude/macos/settings.json" "${HOME}/.claude/settings.json"
+  ln -snfv "${DOT_DIR}/.claude/macos/hooks" "${HOME}/.claude/hooks"
   ln -snfv "${DOT_DIR}/macos/macos.sh" "${HOME}/.system.enviroment"
   mkdir -p "${HOME}/Library/LaunchAgents"
   ln -snfv "${DOT_DIR}/macos/system.environment.plist" "${HOME}/Library/LaunchAgents/system.environment.plist"

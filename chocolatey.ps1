@@ -33,6 +33,8 @@ $choco_packages = @(
     'audacity',
     'awscli',
     'chocolateygui',
+    'claude',
+    'claude-code',
     'cpu-z',
     'crystaldiskinfo',
     'crystaldiskmark',
@@ -89,3 +91,7 @@ cinst -y $package_args
 
 # add cmake path
 cinst -y cmake --installargs 'ADD_CMAKE_TO_PATH=System' --apply-install-arguments-to-dependencies
+
+# create dotfile links
+New-Item -ItemType Directory -Force -Path "$env:USERPROFILE\.claude" | Out-Null
+New-Item -ItemType SymbolicLink -Force -Path "$env:USERPROFILE\.claude\CLAUDE.md" -Target "$PSScriptRoot\.claude\CLAUDE.md"
